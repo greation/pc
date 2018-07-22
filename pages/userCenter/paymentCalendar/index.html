@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../../../css/global.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/paginate.v1.css">
+    <link rel="stylesheet" type="text/css" href="./../css/centerPublic.css">
+    <link rel="stylesheet" type="text/css" href="./../css/paymentCalendar.css">
+    <script type="text/javascript" src="../../../js/jquery1.10.2.min.js"></script>
+    <script type="text/javascript" src="../../../js/global.js"></script>
+    <script type="text/javascript" src="./../js/centerPublic.js"></script>
+    <title>宜泉资本-回款日历</title>
+</head>
+
+<body>
+    <div class="wrap w1200 clearfix">
+        <div class="userCenter_left fl">
+            <!--个人中心左侧开始-->
+            <div class="toPersonSet_cont">
+                <a id="headPortrait" href="javascript:;" class="head tx_boy"></a>
+                <ol class='clearfix'>
+                    <li><a href="javascript:;" class="setting"></a></li>
+                    <li><a href="javascript:;" class="setting"></a></li>
+                    <li><a href="javascript:;" class="setting"></a></li>
+                </ol>
+            </div>
+            <ul class="nav_box">
+                <li><a href="javascript:;">帐户总览</a></li>
+                <li><a href="javascript:;">我的投资</a></li>
+                <li class="user_select"><a href="javascript:;">回款日历</a></li>
+                <li><a href="javascript:;">邀请返利</a></li>
+                <li><a href="javascript:;">我的卡券</a></li>
+                <li><a href="javascript:;">资金记录</a></li>
+                <li><a href="javascript:;">我的借款</a></li>
+                <li><a href="javascript:;">还款计划</a></li>
+                <li><a href="javascript:;">充值</a></li>
+                <li><a href="javascript:;">提现</a></li>
+                <li><a href="javascript:;">账户安全</a></li>
+                <li><a href="javascript:;">我的消息<b class="msgNum">9</b></a></li>
+            </ul>
+        </div>
+        <div class="userCenter_right fr">
+            <div class="right_title f18">
+                <span class="title_info g0c fl">回款日历</span>
+            </div>
+            <div class="right_con">
+                <div class="main_info_box">
+                    <div class="calendarCon">
+                        <div id="calendar" class="calendar fl f16 g98">
+                            <div class="account_title clearfix">
+                                <a href="javascript:;" class="f_btn_fhby hide fr">返回本月</a>
+                                <div class="clearfix">
+                                    <span class="f_btn_pre fl"></span>
+                                    <div class="fl f_riqi f18 g0c">
+                                        <span class="f_year"></span>年<span class="f_month"></span>月
+                                    </div>
+                                    <span class="f_btn_next fl"></span>
+                                </div>
+                            </div>
+                            <div class="f_rili_table">
+                                <div class="f_rili_head clearfix">
+                                    <div class="f_rili_th">日</div>
+                                    <div class="f_rili_th">一</div>
+                                    <div class="f_rili_th">二</div>
+                                    <div class="f_rili_th">三</div>
+                                    <div class="f_rili_th">四</div>
+                                    <div class="f_rili_th">五</div>
+                                    <div class="f_rili_th">六</div>
+                                </div>
+                                <div class="f_tbody clearfix">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="repayment_data f18 g0c fl">
+                            <div class="total">回款总额（元）：0.00</div>
+                            <div class="repayment_dec">
+                                <p>本月待收：0.00</p>
+                                <p>本月已收：0.00</p>
+                                <ul class="g98 dec_con clearfix">
+                                    <li class="fl rel"><i class="pointer abs "></i>当日有回款</li>
+                                    <li class="fl rel"><i class="pointer abs pointer2"></i>当前选中日期</li>
+                                    <li class="fl rel"><i class="pointer abs pointer3"></i>今天</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trade_record">
+                        <div id="record_list" class="tr_list f16 g0c exep_list">
+                            <ol>
+                                <li class="fl tl">标的名称</li>
+                                <li class="fl tc">今日应收利息（元）</li>
+                                <li class="fl tc">今日应收本金（元）</li>
+                                <li class="fl tr">回款周期</li>
+                            </ol>
+                            <div class="trade_record_box">
+                                <ul>
+                                    <li class="fl tl rel record_name toe">房月盈测试标的Ax安安生生多ddd</li>
+                                    <li class="fl tc toe">10.98</li>
+                                    <li class="fl tc toe">10000</li>
+                                    <li class="fl tr toe">第三期（2/3）</li>
+                                </ul>
+                            </div>
+                            <div class="no_record f18 g98 tc hide">
+                                <p>今日暂无回款计划</p>
+                                <a href="javascript:;" class="btn_red_small to_invest f18">马上去投资</a>
+                            </div>
+                        </div>
+                        <div>分页</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+$(function() {
+    //页面加载初始化年月
+    var mydate = new Date();
+    $(".f_year").html(mydate.getFullYear());
+    $(".f_month").html(mydate.getMonth() + 1);
+    showDate(mydate.getFullYear(), mydate.getMonth() + 1);
+
+    //日历上一月
+    $(".f_btn_pre").click(function() {
+        var mm = parseInt($(".f_month").html());
+        var yy = parseInt($(".f_year").html());
+        if (mm == 1) { //返回12月
+            $(".f_year").html(yy - 1);
+            $(".f_month").html(12);
+            showDate(yy - 1, 12);
+        } else { //上一月
+            $(".f_month").html(mm - 1);
+            showDate(yy, mm - 1);
+        }
+    })
+    //日历下一月
+    $(".f_btn_next").click(function() {
+        var mm = parseInt($(".f_month").html());
+        var yy = parseInt($(".f_year").html());
+        console.log(mm,yy)
+        if (mm == 12) { //返回12月
+            $(".f_year").html(yy + 1);
+            $(".f_month").html(1);
+            showDate(yy + 1, 1);
+        } else { //上一月
+            $(".f_month").html(mm + 1);
+            showDate(yy, mm + 1);
+        }
+    })
+    //返回本月
+    $(".f_btn_fhby").click(function() {
+        $(".f_year").html(mydate.getFullYear());
+        $(".f_month").html(mydate.getMonth() + 1);
+        showDate(mydate.getFullYear(), mydate.getMonth() + 1);
+    })
+
+    //读取年月写入日历  重点算法!!!!!!!!!!!
+    function showDate(yyyy, mm) {
+        var dd = new Date(parseInt(yyyy), parseInt(mm), 0); //今天
+        var daysCount = dd.getDate(); //本月天数  
+        var mystr = ""; //写入代码
+        var week = new Date(parseInt(yyyy) + "/" + parseInt(mm) + "/" + 1).getDay(); //今天周几
+        var lastMonth; //上一月天数
+        var nextMounth //下一月天数
+        if (parseInt(mm) == 1) {
+            lastMonth = new Date(parseInt(yyyy) - 1, parseInt(12), 0).getDate();
+        } else {
+            lastMonth = new Date(parseInt(yyyy), parseInt(mm) - 1, 0).getDate();
+        }
+        if (parseInt(mm) == 12) {
+            nextMounth = new Date(parseInt(yyyy) + 1, parseInt(1), 0).getDate();
+        } else {
+            nextMounth = new Date(parseInt(yyyy), parseInt(mm) + 1, 0).getDate();
+        }
+        for (i = 0; i < daysCount; i++) {
+            //计算上月空格数
+            if (i % 7 == 0) {
+                if (i < 7) { //只执行一次
+                    for (j = 0; j < week; j++) {
+                        mystr += "<div class='f_td f_null' style='color:#ccc;'><span>" + (lastMonth - week + j + 1) + "</span></div>";
+                    }
+                }
+            }
+            //这里为一个单元格，添加内容在此
+            var hasMoney = '';
+            if (i % 3 == 0) { //当天是否有回款
+                hasMoney = "<div class='f_money'></div>";
+            }
+            mystr += "<div class='f_td f_number'><span class='f_day'>" + (i + 1) + "</span>" +
+                hasMoney +
+                "<div class='f_table_msg'>回款中<span class='major'>1</span>笔。回款本息;<span class='major'>1，000，000</span>元</div>"
+                //回款信息
+                +"</div>";
+        }
+
+        //表格等高 计算下月空格数
+        for (k = 0; k < 42 - (daysCount + week); k++) { //表格保持等高6行42个单元格
+            mystr += "<div class='f_td f_null' style='color:#ccc;'>" + (k + 1) + "</div>";
+        }
+
+        //表格不等高，只补充末行不足单元格
+        /*if (7 - (daysCount + week) % 7 < 7) {
+            for (k = 0; k < 7 - (daysCount + week) % 7; k++) { 
+                //week为今天周几 daysCount为本月天数  7-week为本行空格数 7-(daysCount+6-week)%7为最后一行有几个空格
+                mystr += "<div class='f-td f-null' style='color:#ccc;'><span>" + (k + 1) + "</span></div>";
+            }
+        }*/
+
+        //写入日历
+        $(".f_rili_table .f_tbody").html(mystr);
+        //给今日加class
+        if (mydate.getFullYear() == yyyy) {
+            if ((mydate.getMonth() + 1) == mm) {
+                var today = mydate.getDate();
+                $(".f_rili_table .f_number").eq(today - 1).addClass("f_today");
+            }
+        }
+        //绑定选择方法
+        $(".f_rili_table .f_number").off("click");
+        $(".f_rili_table .f_number").on("click", function() {
+            $(".f_rili_table .f_number").removeClass("f_on");
+            $(this).addClass("f_on");
+        });
+
+        /*//绑定查看方法
+        $(".f_yuan").off("mouseover");
+        $(".f_yuan").on("mouseover", function() {
+            $(this).parent().find(".f_table_msg").show();
+        });
+        $(".f_table_msg").off("mouseover");
+        $(".f_table_msg").on("mouseover", function() {
+            $(this).show();
+        });
+        $(".f_yuan").off("mouseleave");
+        $(".f_yuan").on("mouseleave", function() {
+            $(this).parent().find(".f_table_msg").hide();
+        });
+        $(".f_table_msg").off("mouseleave");
+        $(".f_table_msg").on("mouseleave", function() {
+            $(this).hide();
+        });*/
+    }
+})
+</script>
+
+</html>

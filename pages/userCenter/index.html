@@ -1,0 +1,616 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../../css/global.css">
+    <link rel="stylesheet" type="text/css" href="../../css/paginate.v1.css">
+    <link rel="stylesheet" type="text/css" href="./css/centerPublic.css">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../plugins/upload/css/bootstrap.css"> -->
+    <link rel="stylesheet" href="../../plugins/upload/css/cropper.min.css">
+    <link rel="stylesheet" href="../../plugins/upload/css/sitelogo.css">
+    <script type="text/javascript" src="../../js/jquery1.10.2.min.js"></script>
+    <script type="text/javascript" src="../../js/global.js"></script>
+    <script type="text/javascript" src="../../plugins/echarts.common.min.js"></script>
+    <script type="text/javascript" src="../../plugins/upload/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../plugins/upload/js/cropper.min.js"></script>
+    <script type="text/javascript" src="../../plugins/upload/js/sitelogo.js"></script>
+    <script type="text/javascript" src="../../plugins/upload/js/html2canvas.min.js"></script>
+    <script type="text/javascript" src="./js/centerPublic.js"></script>
+    <title>宜泉资本-账户总览</title>
+</head>
+<body>
+    <div class="wrap w1200 clearfix">
+        <div class="userCenter_left fl">
+            <!--个人中心左侧开始-->
+            <div class="toPersonSet_cont">
+                <a id="headPortrait" href="javascript:;" class="head tx_boy rel">
+                    <button class="head_btn abs" data-toggle="modal" data-target="#avatar-modal"></button>
+                    <img id="head_img" src="images/user.png" height="90" width="90" alt="" />
+                </a>
+                <ol class='clearfix'>
+                    <li>
+                        <a href="javascript:;" class="setting hide set_phone" title="已绑定手机号"></a>
+                        <a href="javascript:;" class="setting set_phone_err" title="去绑定手机号" href='javascript:;'></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="setting hide set_name" title="已实名"></a>
+                        <a href="javascript:;" class="setting set_name_err" title="去实名" href='javascript:;'></a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="setting set_card" title="已绑卡"></a>
+                        <a href="javascript:;" class="setting hide set_card_err" title="去绑卡" href='javascript:;'></a>
+                    </li>
+                </ol>
+            </div>
+            <ul class="nav_box">
+                <li class="user_select"><a href="javascript:;">帐户总览</a></li>
+                <li><a href="javascript:;">我的投资</a></li>
+                <li><a href="javascript:;">回款日历</a></li>
+                <li><a href="javascript:;">邀请返利</a></li>
+                <li><a href="javascript:;">我的卡券</a></li>
+                <li><a href="javascript:;">资金记录</a></li>
+                <li><a href="javascript:;">我的借款</a></li>
+                <li><a href="javascript:;">还款计划</a></li>
+                <li><a href="javascript:;">充值</a></li>
+                <li><a href="javascript:;">提现</a></li>
+                <li><a href="javascript:;">账户安全</a></li>
+                <li><a href="javascript:;">我的消息<b class="msgNum">9</b></a></li>
+            </ul>
+
+            <!-- 上传头像 -->
+            <div class="modal fade" id="avatar-modal" aria-hidden="true" aria-labelledby="avatar-modal-label" role="dialog" tabindex="-1">
+                <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <form class="avatar-form">
+                        <div class="modal-header clearfix">
+                            <button class="close fr" data-dismiss="modal" type="button">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="avatar-body">
+                                <div class="avatar-upload">
+                                    <input class="avatar-src" name="avatar_src" type="hidden">
+                                    <input class="avatar-data" name="avatar_data" type="hidden">
+                                    <button class="btn btn-info"  type="button" style="height: 35px;" onclick="$('input[id=avatarInput]').click();">请选择图片</button>
+                                    <span id="avatar-name"></span>
+                                    <input class="avatar-input hide" id="avatarInput" name="avatar_file" type="file"></div>
+                                <div class="row clearfix">
+                                    <div class="avatar-wrapper fl"></div>
+                                    <div class="avatar-preview preview-lg fr" id="imageHead"></div>
+                                </div>
+                                <div class="row avatar-btns clearfix">
+                                    <div class="col-4">
+                                            <button class="btn btn-info fa fa-undo" data-method="rotate" data-option="-90" type="button" title="Rotate -90 degrees"> 向左旋转</button>
+                                            <button class="btn  btn-info fa fa-repeat" data-method="rotate" data-option="90" type="button" title="Rotate 90 degrees"> 向右旋转</button>
+                                    </div>
+                                    <div class="col-4" style="text-align: right;">                               
+                                        <!-- <button class="btn btn-info fa fa-arrows" data-method="setDragMode" data-option="move" type="button" title="移动">
+                                        <span class="docs-tooltip" data-toggle="tooltip" title="" data-original-title="$().cropper(&quot;setDragMode&quot;, &quot;move&quot;)">
+                                        </span>
+                                                                              </button> -->
+                                      <button type="button" class="btn btn-info fa fa-search-plus" data-method="zoom" data-option="0.1" title="放大图片">
+                                        <span class="docs-tooltip" data-toggle="tooltip" title="" data-original-title="$().cropper(&quot;zoom&quot;, 0.1)">
+                                          <!--<span class="fa fa-search-plus"></span>-->
+                                        </span>
+                                      </button>
+                                      <button type="button" class="btn btn-info fa fa-search-minus" data-method="zoom" data-option="-0.1" title="缩小图片">
+                                        <span class="docs-tooltip" data-toggle="tooltip" title="" data-original-title="$().cropper(&quot;zoom&quot;, -0.1)">
+                                          <!--<span class="fa fa-search-minus"></span>-->
+                                        </span>
+                                      </button>
+                                      <button type="button" class="btn btn-info fa fa-refresh" data-method="reset" title="重置图片">
+                                            <span class="docs-tooltip" data-toggle="tooltip" title="" data-original-title="$().cropper(&quot;reset&quot;)" aria-describedby="tooltip866214"></span>
+                                       </button>
+                                    </div>
+                                    <div class="col-4">
+                                        <button class="btn btn-info btn-block avatar-save fr fa fa-save" type="button" data-dismiss="modal"> 保存修改</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+            //做个下简易的验证  大小 格式 
+            $('#avatarInput').on('change', function(e) {
+                var filemaxsize = 1024 * 5;//5M
+                var target = $(e.target);
+                var Size = target[0].files[0].size / 1024;
+                if(Size > filemaxsize) {
+                    alert('图片过大，请重新选择!');
+                    $(".avatar-wrapper").childre().remove;
+                    return false;
+                }
+                if(!this.files[0].type.match(/image.*/)) {
+                    alert('请选择正确的图片!')
+                } else {
+                    var filename = document.querySelector("#avatar-name");
+                    var texts = document.querySelector("#avatarInput").value;
+                    var teststr = texts; //你这里的路径写错了
+                    testend = teststr.match(/[^\\]+\.[^\(]+/i); //直接完整文件名的
+                    filename.innerHTML = testend;
+                }
+            
+            });
+
+            $(".avatar-save").on("click", function() {
+                var img_lg = document.getElementById('imageHead');
+                // 截图小的显示框内的内容
+                html2canvas(img_lg, {
+                    allowTaint: true,
+                    taintTest: false,
+                    onrendered: function(canvas) {
+                        canvas.id = "mycanvas";
+                        //生成base64图片数据
+                        var dataUrl = canvas.toDataURL("image/jpeg");
+                        var newImg = document.createElement("img");
+                        newImg.src = dataUrl;
+                        imagesAjax(dataUrl)
+                    }
+                });
+            })
+            
+            function imagesAjax(src) {
+                var data = {};
+                data.img = src;
+                data.jid = $('#jid').val();
+                $.ajax({
+                    url: "upload-logo.php",
+                    data: data,
+                    type: "POST",
+                    dataType: 'json',
+                    success: function(re) {
+                        if(re.status == '1') {
+                            $('#head_img').attr('src',src );
+                        }
+                    }
+                });
+            }
+            </script>
+        </div>
+        <div class="userCenter_right fr">
+            <div class="right_title f18">
+                <span class="title_info g0c fl">账户总览</span>
+                <span class="login_time fr f16 g98">上次登录：&nbsp; 09-20 17:10:13 &nbsp;<a class="f16 blue" href="javascript:;">最近登录</a></span>
+            </div>
+            <div class="right_con">
+                <div class="money_dec">
+                    <div class="md_left fl">
+                        <div class="surplus">
+                            <div class="s_title fwn f16 g98 rel clearfix">
+                                <span class="fl">可用余额</span>
+                                <i class="doubt fl"></i>
+                                <div class="abs s_dec">
+                                    可用余额 = 存钱罐-冻结金额；享受汇添富基金的稳定收益 。
+                                </div>
+                            </div>
+                            <div class="s_con">
+                                <div class="money_num f30 g0c fl">0<span class="f16">.00</span><span class="f18">元</span></div>
+                                <a href="javascript:;" class="tc recharge">充值</a>
+                                <a href="javascript:;" class="tc withdraw g0c">提现</a>
+                            </div>
+                        </div>
+                        <div class="earning">
+                            <div class="s_title fwn f16 g98 rel clearfix">
+                                <span class="fl">累计收益</span>
+                                <i class="doubt fl"></i>
+                                <div class="abs s_dec">
+                                    累计收益截止当前的投资收益、邀请返利、存钱罐收益、平台加息等所有收益总额（各类目对账时间不同，可能存在时间差异，请以具体到账为准。）
+                                </div>
+                            </div>
+                            <div class="s_con">
+                                <div class="money_num f30 g0c fl">0<span class="f16">.00</span><span class="f18">元</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md_right fl">
+                        <ul class="type_list fl">
+                            <li class="rel"><span class="point point1 abs"></span><span class="type_name">待收本金</span><span>0.00元</span></li>
+                            <li class="rel"><span class="point point2 abs"></span><span class="type_name">待收利息</span><span>0.00元</span></li>
+                            <li class="rel"><span class="point point3 abs"></span><span class="type_name">待收返利</span><span>0.00元</span></li>
+                            <li class="rel"><span class="point point4 abs"></span><span class="type_name">存钱罐  </span><span>0.00元</span></li>
+                            <li class="rel"><span class="point point5 abs"></span><span class="type_name">可用余额</span><span>0.00元</span></li>
+                            <li class="rel"><span class="point point6 abs"></span><span class="type_name">冻结金额</span><span>0.00元</span></li>
+                        </ul>
+                        <div class="pie_chart_box fl">
+                            <div id="pie_chart" style="width:190px;height:200px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="earning_bar">
+                    <li class="fl">红包金额：<u class="red">0.00</u>元</li>
+                    <li class="fl tc">返利收益：<u class="red">0.00</u>元</li>
+                    <li class="fr tr">我的积分：<u class="red">0</u></li>
+                </ul>
+                <div class="main_info_box">
+                    <div class="payment_plan">
+                        <div class="mib_title f18 g0c">回款计划</div>
+                        <!-- <div id="payment_plan_con" style="width:1095px;height:460px;margin:-30px 0 0 -95px;"></div> -->
+                        <div class="payment_plan_data rel">
+                            <span class="_line"></span>
+                            <span class="_line"></span>
+                            <span class="_line"></span>
+                            <span class="_line"></span>
+                            <span class="_line"></span>
+                        </div>
+                        <ul class="date_month g98">
+                            <li class="fl tl rel cur">
+                                12月
+                                <div class="data_info abs">
+                                    <div class="progress abs">
+                                        <span class="num_info abs">2015</span>
+                                        <span class="circle_t abs"></span>
+                                        <span class="circle_b abs"></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="fl rel tc">
+                                1月
+                                <div class="data_info abs">
+                                    <div class="progress abs">
+                                        <span class="num_info abs">2015</span>
+                                        <span class="circle_t abs"></span>
+                                        <span class="circle_b abs"></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="fl rel tc">
+                                2月
+                                <div class="data_info abs">
+                                    <div class="progress abs">
+                                        <span class="num_info abs">2015</span>
+                                        <span class="circle_t abs"></span>
+                                        <span class="circle_b abs"></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="fl rel tc">
+                                3月
+                                <div class="data_info abs">
+                                    <div class="progress abs">
+                                        <span class="num_info abs">2015</span>
+                                        <span class="circle_t abs"></span>
+                                        <span class="circle_b abs"></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="fl rel tc">
+                                4月
+                                <div class="data_info abs">
+                                    <div class="progress abs">
+                                        <span class="num_info abs">2015</span>
+                                        <span class="circle_t abs"></span>
+                                        <span class="circle_b abs"></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="fl rel tc">
+                                5月
+                                <div class="data_info abs">
+                                    <div class="progress abs">
+                                        <span class="num_info abs">2015</span>
+                                        <span class="circle_t abs"></span>
+                                        <span class="circle_b abs"></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="fl rel tc">
+                                6月
+                                <div class="data_info abs">
+                                    <div class="progress abs">
+                                        <span class="num_info abs">2015</span>
+                                        <span class="circle_t abs"></span>
+                                        <span class="circle_b abs"></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="fl rel tc">
+                                7月
+                                <div class="data_info abs">
+                                    <div class="progress abs">
+                                        <span class="num_info abs">2015</span>
+                                        <span class="circle_t abs"></span>
+                                        <span class="circle_b abs"></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="fl rel tc">
+                                8月
+                                <div class="data_info abs">
+                                    <div class="progress abs">
+                                        <span class="num_info abs">2015</span>
+                                        <span class="circle_t abs"></span>
+                                        <span class="circle_b abs"></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="fl rel tc">
+                                9月
+                                <div class="data_info abs">
+                                    <div class="progress abs">
+                                        <span class="num_info abs">2015</span>
+                                        <span class="circle_t abs"></span>
+                                        <span class="circle_b abs"></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="fl rel tc">
+                                10月
+                                <div class="data_info abs">
+                                    <div class="progress abs">
+                                        <span class="num_info abs">2015</span>
+                                        <span class="circle_t abs"></span>
+                                        <span class="circle_b abs"></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="fl rel tc">
+                                11月
+                                <div class="data_info abs">
+                                    <div class="progress abs">
+                                        <span class="num_info abs">2015</span>
+                                        <span class="circle_t abs"></span>
+                                        <span class="circle_b abs"></span>
+                                    </div>
+                                </div>
+                            <li class="fl rel tr cur">
+                                12月
+                                <div class="data_info abs">
+                                    <div class="progress abs">
+                                        <span class="num_info abs">2015</span>
+                                        <span class="circle_t abs"></span>
+                                        <span class="circle_b abs"></span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="invest_trend">
+                        <div class="mib_title f18 g0c">投资走势</div>
+                        <div id="invest_trend_con" style="width:1095px;height:470px;margin:-30px 0 0 -95px;"></div>
+                    </div>
+                    <div class="trade_record">
+                        <div class="mib_title f18 g0c">最近交易记录 <a href="javascript:;" class="fr f18 g98">全部 &gt;</a></div>
+                        <div id="record_list" class="tr_list f16 g0c">
+                            <ol>
+                                <li class="fl tl">动作时间</li>
+                                <li class="fl tc">交易金额(元)</li>
+                                <li class="fl tc">资金流向</li>
+                                <li class="fl tr">交易类型</li>
+                            </ol>   
+                            <div class="trade_record_box"> 
+                                <ul>
+                                    <li class="fl tl">2017-08-18 10:33:24</li>
+                                    <li class="fl tc">20.00</li>
+                                    <li class="fl tc">转入</li>
+                                    <li class="fl tr">体验金收益</li>
+                                </ul>
+                                <ul>
+                                    <li class="fl tl">2017-08-18 10:33:24</li>
+                                    <li class="fl tc">20.00</li>
+                                    <li class="fl tc">转入</li>
+                                    <li class="fl tr">体验金收益</li>
+                                </ul>
+                                <ul>
+                                    <li class="fl tl">2017-08-18 10:33:24</li>
+                                    <li class="fl tc">20.00</li>
+                                    <li class="fl tc">转入</li>
+                                    <li class="fl tr">体验金收益</li>
+                                </ul>
+                                <ul>
+                                    <li class="fl tl">2017-08-18 10:33:24</li>
+                                    <li class="fl tc">20.00</li>
+                                    <li class="fl tc">转入</li>
+                                    <li class="fl tr">体验金收益</li>
+                                </ul>
+                                <ul>
+                                    <li class="fl tl">2017-08-18 10:33:24</li>
+                                    <li class="fl tc">20.00</li>
+                                    <li class="fl tc">转入</li>
+                                    <li class="fl tr">体验金收益</li>
+                                </ul>
+                            </div>  
+                            <div class="no_record f16 g98 tc hide">
+                                <img src="./images/no_record.png" height="80" width="100" alt="" />
+                                <p>没有记录</p>
+                            </div>
+                        </div>
+                        <div>分页</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 升级弹框 -->
+    <div id="update" class="update hide fixed">
+        <a href="javascript:;" class="setting_btn abs"></a>
+        <a href="javascript:;" class="update_close_btn abs"></a>
+    </div>
+    
+    <div id="popBox" class="popBox">
+        <div class="popCon">
+            <div class="popTip g0c f18 tc">
+                <span class="rel">授权管理</span>
+            </div>
+            <p class="clearfix" style="border-bottom: 5px solid #F9F9F9;width: 100%;"></p>
+            <div class="clearfix" style="min-height:72px;">
+               <img  src="../../images/sqbg.jpg" style="width: 80%;margin: 20px auto;display: block;"/>
+            </div>
+            <div class="tc"><span class="btn_red_normal">授权并登录</span></div>
+            <div class="tc" style="margin-top: 10px;color: #BBBBBB;">
+            	授权将会获取您公开信息（手机号、用户等级）
+            </div>
+        </div>
+    </div>    
+    <div id="mask" class=""></div>
+</body>
+<script type="text/javascript">
+    payment_plan_month = {}
+    payment_plan_month.data = ['12月','1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']
+    var payment_plan_data = [500,8630,1520,40000,0,56,0,0,1236,8222,0,0,0,0];
+    var ppd_max = Math.max.apply(null, payment_plan_data);
+    console.log(ppd_max);
+    //设置高度 填充数据
+     function showPlanData(){
+        payment_plan_data.forEach(function(el,i){
+            var h = 80*el/ppd_max+'%';
+            if(el/ppd_max){
+                $(".date_month li").eq(i).find(".progress").show();
+                $(".date_month li").eq(i).find(".progress").css('height',h).find(".num_info").text(el.toFixed(2));
+                $(".date_month li").eq(i).find(".ppd_month").text(payment_plan_month.data[i]);
+            }
+        });
+    }
+    showPlanData();
+    /*$(".date_month li").hover(function(e){
+        $(this).find(".progress").fadeIn(150);
+        $(this).siblings().find(".progress").fadeOut(150);
+    });*/
+
+
+
+    //投资趋势
+    var myChart_it = echarts.init(document.getElementById('invest_trend_con'));
+    var invest_trend_data = [12000.00, 8200.00, 13400,15600,31500.01,20600,23000.10,21000,10000.00,31500,9600,18600,2470];
+    var max = Math.max.apply(null, invest_trend_data)
+
+    invest_trend_data = invest_trend_data.map(function(el){
+        console.log(el,max)
+        if(el === max){
+            el = {
+                value:Number(max).toFixed(2), 
+                symbolSize:12,
+                symbol:'circle',
+                itemStyle : {
+                    normal: {
+                      color: "#fff",  // 会设置点和线的颜色，所以需要下面定制 line
+                      borderColor: "#1e82fe",  // 点边线的颜色
+                      borderWidth:4,
+                      label : {
+                            show: true,
+                            textStyle : {
+                                fontSize : '16',
+                                fontFamily : '微软雅黑',
+                                backgroundColor:'#1e82fe',
+                                padding:10,
+                                borderRadius:5,
+                            }
+                        }
+                    }
+                }   
+            }
+        }else{
+            el = Number(el).toFixed(2);
+        }
+        return el
+    })
+
+    var options_it = {
+        color: ['#1e82ff'],
+        tooltip : {
+            trigger: 'axis',
+            formatter: '<div style="min-width:120px;">{b0}<br /><span style="display:inline-block;margin-right:5px;border-radius:10px;width:9px;height:9px;background-color:#fff"></span><span class="echart_money_data">{c0}</span></div>',
+            hideDelay: 100,            // 隐藏延迟，单位ms
+            transitionDuration : 0.4,  // 动画变换时间，单位s
+            borderRadius: 4,           // 提示边框圆角，单位px，默认为4
+            padding: 5,
+            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                type : 'line',         // 默认为直线，可选为：'line' | 'shadow'
+                lineStyle : {          // 直线指示器样式设置
+                    color: '#1e82ff',
+                    width: 1,
+                    type: 'solid'
+                }
+            }
+        },
+        xAxis : [
+            {
+                boundaryGap : false,
+                axisTick:{
+                    show:false
+                },
+                data : ['12月','1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
+                axisLabel: {
+                    textStyle: {
+                        color: '#989898',
+                        fontSize:'14'
+                    },
+                }, 
+                axisLine:{
+                    lineStyle:{
+                        color:'#f5f5f5',
+                    }
+                }
+            }
+        ],
+        yAxis : [
+            {
+                axisTick:{
+                    show:false
+                },
+                type: 'value',
+                position: 'right',
+                axisLine: {
+                    lineStyle: {
+                        color: '#f5f5f5'
+                    }
+                },
+                axisLabel: {
+                    formatter: ''
+                },
+                splitLine: {
+                    show: true,
+                    //  改变轴线颜色
+                    lineStyle: {
+                        color:'#f5f5f5'
+                    }                          
+                }
+            },
+            {
+                type : 'value',
+                axisTick:{
+                    show:false
+                },
+                axisLabel : {
+                    formatter: ''
+                },
+                axisLine:{
+                    lineStyle:{
+                        color:'#f5f5f5',
+                    }
+                }
+            }
+        ],
+        series : [
+            {
+                name:'投资趋势',
+                type:'line',
+                stack: '总量',
+                smooth:false,
+                symbol:'none',
+                itemStyle: {
+                    normal: {
+                        areaStyle: {// 区域图，填充
+                            color :'rgba(136,189,255,0.1)',
+                        },
+                        lineStyle: {// 属性lineStyle控制线条样式
+                            color: '#1e82ff',
+                            width: 1
+                        }
+                    }
+                },
+                data:invest_trend_data
+            }
+        ]
+    };
+    myChart_it.setOption(options_it);
+    $(function() {
+        showPopBox('popBox')
+    });
+</script>
+<!-- <script type="text/javascript" src="js/index.js"></script> -->
+</html>

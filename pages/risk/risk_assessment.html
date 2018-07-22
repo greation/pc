@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>风险评测</title>
+    <link rel="stylesheet" type="text/css" href="../../css/global.css">
+    <link rel="stylesheet" type="text/css" href="../../css/risk_assessment.css">    
+    <link rel="stylesheet" type="text/css" href="../../plugins/swiper/swiper.min.css">
+    <script type="text/javascript" src="../../js/jquery1.10.2.min.js"></script>
+    <script type="text/javascript" src="../../plugins/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="../../js/global.js"></script>
+</head>
+<body>
+    <div class="container" id="assess">
+        <div class="cont_box text-center">
+           <p class="cont_top"><span class="text_style01 cur_index">1</span><span class="text_style02">/10</span></p>
+           <p class="subject">您的投资经验可描述为 ?</p>
+           <div class="question_list">
+               <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide swiper-no-swiping" v-for="question in questions">
+                    <div>
+                        <div class="option_item active">
+                            <span class="text_option">111111111111</span>
+                        </div>
+                        <div class="option_item ">
+                            <span class="text_option">111111111111</span>
+                        </div>
+                        <div class="option_item ">
+                            <span class="text_option">111111111111</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide swiper-no-swiping" v-for="question in questions">
+                    <div>
+                        <div class="option_item active">
+                            <span class="text_option">111111111111</span>
+                        </div>
+                        <div class="option_item ">
+                            <span class="text_option">111111111111</span>
+                        </div>
+                        <div class="option_item ">
+                            <span class="text_option">111111111111</span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="swiper-slide swiper-no-swiping" v-for="question in questions">
+                    <div>
+                        <div class="option_item active">
+                            <span class="text_option">111111111111</span>
+                        </div>
+                        <div class="option_item ">
+                            <span class="text_option">111111111111</span>
+                        </div>
+                        <div class="option_item ">
+                            <span class="text_option">111111111111</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!-- 如果需要分页器 
+              <div class="swiper-pagination"></div>
+          -->
+      </div>
+
+      <p class="next_question">上一题</p>
+  </div>
+</div>
+<script>
+    // var curQuesIndex = 0;
+    // var resultArr = [];
+    var mySwiperRisk = new Swiper('.question_list .swiper-container', {
+        pagination: '.banner .swiper-pagination',
+        speed: 400,
+        spaceBetween: 100,
+        noSwiping : true,
+        onSlideChangeStart: function(swiper){
+            curQuesIndex = swiper.realIndex;
+            $('.cur_index').text(curQuesIndex+1);
+            if(swiper.realIndex===0){
+                $('.next_question').hide();
+            }else{
+                $('.next_question').show();
+            }
+            
+        }
+    })
+    $('.next_question').bind('click',function(){
+        mySwiperRisk.slidePrev();
+    })
+    $('.option_item').bind('click',function(){
+        $(this).addClass('active').siblings('.option_item').removeClass('active');
+        mySwiperRisk.slideNext();
+    })
+</script>
+</body>
+</html>

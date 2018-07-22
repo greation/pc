@@ -1,0 +1,61 @@
+*{margin:0;padding: 0;}
+html,body{font-family: PingFangSC-Regular;}
+	.wrap-yyfw{position: absolute;display: block;width: 100%;left: 0;top: 0;}
+	 img{display: block;margin: 0 auto;width: 100%;position: relative;}
+	 .yyfw{width: 650px;height: 600px;display: block;position: absolute;left: 50%;margin-left: -325px;top:20%;background: #FFFFFF;overflow: hidden;}
+	 .fl{float: left;}
+	 .fr{float: right;}
+	 .ml70{margin-left: 70px;}
+	 .w100{width: 100%;}
+	 .cb{clear: both;}
+	 .mr65{margin-right: 65px;}
+	 .h60{height: 60px;}
+	 .lh60{line-height: 60px;}
+	 .pt20{padding-top: 20px;}
+	 .mt30{margin-top: 30px;}
+	 .mt20{margin-top: 20px;}
+.status{padding: 1px 10px;background: #117EFF;margin-left: 20px; color: #FFFFFF;}
+.db{display: block;}
+.yyname{width: 80px;text-align: right;}
+.xzxm{width: 400px;}
+select{height: 55px;padding-left: 10px;}
+.minus{height: 55px;width: 55px;border: 1px solid #E8E8E8;border-radius: 4px;text-align: center;line-height: 55px;font-size: 30px;color: #9c9c9c;margin-left: 35px;}
+.plus{height: 55px;width: 55px;border: 1px solid #E8E8E8;border-radius: 4px;text-align: center;line-height: 55px;font-size: 30px;color: #9c9c9c;}
+.money{height: 55px;width: 210px;border: none;outline: none;padding-left: 10px;font-size: 16px;}
+.moneyinput{border: 1px solid #E8E8E8;border-radius: 4px;margin-left: 20px;width: 245px;}
+.btnsure{}
+textarea{padding: 10px;border: 1px solid #E8E8E8;border-radius: 4px;width: 380px;}
+
+.btnsure{width: 344px;height: 44px;text-align: center;line-height: 44px;color: #FFFFFF;background: #117EFF;border-radius: 4px;cursor: pointer;margin-left:183px;margin-top: 20px;}
+
+.retest{font-size: 12px;
+color: #117EFF;border: 1px solid #117EFF;
+border-radius: 4px;width: 66px;height: 30px;text-align: center;line-height: 30px;cursor: pointer;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

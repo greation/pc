@@ -1,0 +1,351 @@
+.contentBox {
+    min-width: 1200px;
+    padding-top: 25px;
+}
+
+.main {
+    border: 1px solid #f3f3f3;
+    height: 696px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.title {
+    height: 90px;
+    border-bottom: 5px solid #f9f9f9;
+    line-height: 90px;
+    padding: 0 37px 0 31px;
+}
+
+.imgBox {
+    margin: 116px 0 0 171px;
+}
+
+.con_info {
+    width: 400px;
+    margin: 60px auto;
+}
+
+.info_box {
+    margin-top: 20px;
+}
+
+.info_dec {
+    height: 42px;
+    line-height: 42px;
+}
+
+.ipt_box {
+    width: 282px;
+    height: 42px;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+.newbox {
+    width: 330px;
+    height: 42px;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    margin-left: 25px;
+    overflow: hidden;
+}
+
+.newinfo {
+    margin-top: 20px;
+}
+
+.ipt {
+    width: 270px;
+    height: 42px;
+    line-height: 42px;
+    padding-left: 8px;
+}
+
+.err_msg {
+    width: 258px;
+    min-height: 25px;
+    line-height: 25px;
+    padding-left: 25px;
+    background: url(../images/error.png) no-repeat left 4px;
+    margin-bottom: 8px;
+    margin-top: 6px;
+    padding-top: 2px;
+}
+
+.newerr_msg {
+    width: 258px;
+    min-height: 25px;
+    line-height: 25px;
+    padding-left: 44px;
+    background: url(../images/error.png) no-repeat 24px 0px;
+    margin-bottom: 8px;
+    margin-top: 6px;
+    padding-top: 2px;
+}
+
+.newremenber {
+    width: 330px;
+    margin-top: 20px;
+    margin-bottom: 22px;
+}
+
+.newto_register {
+    width: 330px;
+    margin-top: 22px;
+    margin-left: 20px;
+}
+
+.newloginbtn {
+    width: 330px;
+    height: 44px;
+    margin-top: 20px;
+    display: block;
+    height: 44px;
+    background: #1e82ff;
+    color: #fff;
+    margin-left: 25px;
+    font-size: 20px;
+    line-height: 44px;
+    text-align: center;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.newlogintitle {
+    width: 330px;
+    height: 50px;
+    background: url(../images/bgdl.png) no-repeat bottom center;
+    margin-left: 25px;
+    line-height: 30px;
+    font-size: 18px;
+    color: #1e82ff;
+    text-align: center;
+}
+
+.img_code, .msg_code {
+    border-radius: 0;
+    width: 110px;
+    height: 42px;
+    line-height: 42px;
+    display: inline-block;
+    top: 0px;
+    right: -1px;
+    color: #1e82ff;
+    background: none;
+}
+
+.agreement {
+    width: 304px;
+    margin: 22px -20px 0 0;
+}
+
+.check {
+    width: 15px;
+    height: 15px;
+    margin-top: 3px;
+}
+
+.register_btn {
+    width: 284px;
+    height: 44px;
+    margin-top: 20px;
+}
+
+/* 注册成功 */
+.main_succ {
+    height: 518px;
+    padding-top: 232px;
+    border-radius: 0;
+}
+
+.s_title {
+    width: 280px;
+    height: 54px;
+    line-height: 54px;
+    padding-left: 70px;
+    background: url(../images/invest_succ.png) no-repeat left center;
+    margin: 0 auto;
+}
+
+.login_success {
+    width: 165px;
+}
+
+.back_info {
+    color: #474747;
+    margin-top: 44px;
+    margin-bottom: 46px;
+}
+
+.link_out {
+    color: #474747;
+}
+
+.btn_box {
+    width: 372px;
+    margin: 45px auto 0;
+}
+
+.truename {
+    width: 148px;
+    height: 44px;
+    line-height: 44px;
+    margin-bottom: 52px;
+}
+
+/* 登录 */
+.login_phone_box:after, .login_psw_box:after {
+    position: absolute;
+    width: 55px;
+    height: 42px;
+    content: "";
+    top: 0;
+    left: 0;
+    background: url(../images/login_phone.png) no-repeat 20px center;
+}
+
+.login_psw_box:after {
+    background: url(../images/login_psw.png) no-repeat 20px center;
+}
+.login .ipt {
+    width: 290px;
+    float: right;
+}
+.telicon {
+    background: url(../images/login_phone.png) no-repeat;
+    float: left;
+    width:20px;height: 30px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.pwdicon {
+    background: url(../images/login_psw.png) no-repeat;float: left;
+    width:20px;height: 30px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.remember {
+    width: 284px;
+    margin-top: 20px;
+    margin-bottom: 22px;
+}
+
+.remember .check {
+    margin-right: 9px;
+}
+
+.to_register {
+    width: 284px;
+    margin-top: 22px;
+}
+
+/* 找回密码 */
+.findPsw_main {
+    height: 764px;
+}
+
+.step {
+    padding: 69px 0 0 31px;
+}
+
+.progress_bg {
+    width: 1132px;
+    height: 5px;
+    background: #d1d1d2;
+}
+
+.speed {
+    height: 5px;
+    background: #e96460;
+    width: 25%;
+}
+
+.pointer {
+    width: 16px;
+    height: 16px;
+    background: #d1d1d2;
+    color: #d1d1d2;
+    border-radius: 50%;
+    display: inline-block;
+    top: -6px;
+    right: 276px;
+}
+
+.pointer1 {
+    right: 842px;
+    background: #e96460;
+    color: #e96460;
+}
+
+.pointer2 {
+    right: 559px;
+}
+
+.step2 .speed {
+    width: 50%;
+}
+
+.step3 .speed {
+    width: 100%;
+}
+
+.step2 .pointer2, .step2 .pointer1 {
+    background: #e96460;
+    color: #e96460;
+}
+
+.step3 .pointer {
+    background: #e96460;
+    color: #e96460;
+}
+
+.step_dec {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    left: -42px;
+    top: 22px;
+}
+
+.findPsw_title {
+    margin-top: 128px;
+    padding-left: 48px;
+    height: 54px;
+    border-bottom: 5px solid #f9f9f9;
+}
+
+.findPsw_con .con_info {
+    margin: 138px 412px 0 0;
+}
+
+.new-login {
+    height: 584px;
+    background: url(../images/bgdl_02.jpg) no-repeat center;
+    width: 100%;
+}
+
+.new-login .con {
+    height: 460px;
+    width: 380px;
+    background: #FFFFFF;
+    display: block;
+    position: absolute;
+    top: 185px;
+    left: 50%;
+    margin-left: 222px;
+}
+
+.newcon {
+    width: 380px;
+    margin: 0
+}
+.codeNum{color: white;background: #1e82ff;letter-spacing: 10px;}

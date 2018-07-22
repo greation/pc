@@ -1,0 +1,230 @@
+.contentBox{
+	min-width: 1200px;
+    height: 1105px;
+    padding-top:25px;
+}
+.main{
+    border:1px solid #f3f3f3;
+    height: 1082px;
+    background: #fff;
+}
+.step{
+    padding:69px 0 0 31px;
+}
+.progress_bg{
+    width: 1132px;
+    height: 5px;
+    background: #d1d1d2;
+}
+.speed{
+    height: 5px;
+    background:#e96460; 
+    width: 25%;
+}
+.pointer{
+    width: 16px;
+    height: 16px;
+    background: #d1d1d2;
+    color:#d1d1d2;
+    border-radius: 50%;
+    display: inline-block;
+    top:-6px;
+    right: 276px;
+}
+.pointer1{
+    right: 842px;
+    background:#e96460; 
+    color:#e96460;
+}
+.pointer2{
+    right: 559px;
+}
+.step2 .speed{
+    width: 50%;
+}
+.step3 .speed{
+    width: 100%;
+}
+.step2 .pointer2,.step2 .pointer1{
+    background:#e96460; 
+    color:#e96460;
+}
+.step3 .pointer{
+    background:#e96460; 
+    color:#e96460;
+}
+.step_dec{
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    left:-25px;
+    top:22px;
+}
+.confirm_info{
+    height: 52px;
+    border-top:1px solid #f3f3f3;
+    border-bottom:1px solid #f3f3f3;
+    margin-top: 93px;
+    background: #f9f9f9;
+    line-height: 52px;
+    padding:0 32px;
+}
+.confirm_con{
+    padding:0 32px 25px;
+}
+.sml_title{
+    border-top: 1px solid #f3f3f3;
+    border-bottom: 1px solid #f3f3f3;
+    margin-top: 5px;
+    padding: 26px 0;
+    font-size: 16px;
+    line-height: 20px;
+}
+.sml_title.first{
+    border-top:none;
+}
+.sml_title .bl {
+    height: 20px;
+    padding-left: 18px;
+    border-left: 4px solid #1e82ff;
+}
+.info_con{
+    padding: 15px 0 20px;
+}
+.info_con p{
+    line-height: 35px;
+}
+.detail {
+    padding:22px 0;
+}
+.detail .bl{
+    padding-left: 40px;
+    border:none;
+    height: 28px;
+    line-height: 28px;
+    background: url(../images/intro.png) no-repeat left center;
+}
+.youhui_logo_bg .bl{
+    background: url(../images/youhui.png) no-repeat left center;
+}
+.detail_con{
+    height: 98px;
+    border-bottom: 1px solid #f3f3f3;
+    padding-top: 23px;
+}
+.detail_con div{
+    width: 25%;
+}
+.detail_con p{
+    margin-top:20px;
+}
+
+.selectCon{
+    width: 420px;
+    margin-top: 34px;
+}
+.select_title{
+    line-height: 42px;
+}
+._select,._selectVal{
+    width: 311px;
+    height: 42px;
+    line-height: 42px;
+}
+._arr{
+    width: 14px;
+    top:20px;
+    background: url(../images/arr_b.png);
+}
+._options{
+    top:50px;
+}
+.will_income{
+    width: 100%;
+    margin-top: 11px;
+    margin-bottom: 18px;
+}
+.will_income span{
+    width: 150px;
+    display: inline-block;
+}
+.will_income_con:after{
+    position: absolute;
+    top:2px;
+    left: -25px;
+    content: "";
+    width: 40px;
+    height: 20px;
+    background: url(../images/doubt.png) no-repeat left center;
+}
+.will_income_info{
+    width:400px;
+    padding:25px;
+    background: #f9f9f9;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 0px 5px 8px #ddd;
+    left:-480px;
+    line-height: 30px;
+    display: none;
+}
+.will_income_con:hover .will_income_info{
+    display: block;
+}
+.btns{
+    padding-right: 2px;
+}
+.back{
+    color:#1e82fe;
+    margin-right:56px;
+}
+.invest{
+    width: 148px;
+    height: 44px;
+}
+/* 投资成功 */
+.succ{
+    height: 750px;
+}
+.succ .main{
+    height: 618px;
+    padding-top: 132px;
+}
+.s_title{
+    width: 280px;
+    height: 54px;
+    line-height: 54px;
+    padding-left: 70px;
+    background: url(../images/invest_succ.png) no-repeat left center;
+    margin:0 auto;
+}
+.back_info{
+    color:#474747;
+    margin-top:44px;
+    margin-bottom: 46px;
+}
+.link_out{
+    color:#474747; 
+}
+.btn_box{
+    width: 372px;
+    margin:45px auto 0;
+}
+.old_list{
+    width: 146px;
+    height: 42px;
+    background: none;
+    color:#e96460;
+    border:1px solid #e96460;
+    line-height: 42px;
+}
+.btn_red_small{
+    width: 148px;
+    height: 44px;
+    line-height: 44px;
+}
+.invest_succ_img{
+    display:block;
+    margin:40px auto 0;
+}

@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="../css/global.css" />
+    <link rel="stylesheet" type="text/css" href="../plugins/swiper/swiper.min.css" />
+    <script type="text/javascript" src="../js/jquery1.10.2.min.js"></script>
+    <script type="text/javascript" src="../plugins/swiper/swiper.min.js"></script>
+    <title>宜泉资本-新手指南</title>
+</head>
+<body>
+
+<style>
+   .img img{display: block;margin: 0 auto;}
+    .swiper-container{
+        width:1200px;margin: 0 auto}
+   .swiper-button-guidl{background-image:url(../images/al.png);display: none;}
+   .swiper-button-guidr{background-image: url(../images/ar.png);display: none;}
+   .swiper-container:hover .swiper-button-guidl{display: block}
+   .swiper-container:hover .swiper-button-guidr{display: block}
+   .swiper-button-guidbl{background-image:url(../images/guidil.png);margin-left: 50px;}
+   .swiper-button-guidbr{background-image:url(../images/guidir.png); margin-right: 50px;}
+   .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+       opacity: 0;  cursor: auto;pointer-events: none;
+   }
+   .guidbtn{width:320px;height:60px;display: block;position: absolute;left: 50%;margin-left: -160px;bottom:144px;}
+    .guidb{position: relative;
+        width: 1200px;
+    margin: 0 auto;overflow-x: hidden;}
+   .guidimg img{ width: 100%;}
+   .guid img{width: 60%;display: block;margin: 0 auto;}
+   .minimg li{display: none;}
+   .minimg li img{width: 60%;display: block;margin: 0 auto;}
+   .active{display: block !important;}
+   .guidimgb .swiper-slide img{width: 60%;display: block;margin: 0 auto;}
+   .swiper-container .swiper-button-next,.swiper-container .swiper-button-prev {
+       position: absolute;top: 50%;  width: 104px;  height: 104px;  margin-top: -22px;  z-index: 10;  cursor: pointer;-moz-background-size:104px 104px;  -webkit-background-size: 104px 104px;  background-size:104px 104px;  background-position: center;  background-repeat: no-repeat;
+   }
+   .swiper-pagination-bullet-active {
+       opacity: 1;
+       background: #1e82ff;
+   }
+    .guidimgb{
+        height:400px;}
+</style>
+<div class="container" style="padding-top: 10px;padding-bottom: 50px;background: #fff;">
+    <div class="relative img">
+        <img src="../images/guid_01.jpg">
+    </div>
+    <div>
+        <div class="swiper-container" >
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <span class="guidbtn"></span>
+                    <img src="../images/guid1.png" />
+                </div>
+                <div class="swiper-slide">
+                    <span class="guidbtn" ></span>
+                    <img src="../images/guid2.png" />
+                </div>
+                <div class="swiper-slide">
+                    <span class="guidbtn" ></span>
+                    <img src="../images/guid3.png" />
+                </div>
+            </div>
+            <div class="swiper-button-prev swiper-button-guidl"></div>
+            <div class="swiper-button-next swiper-button-guidr"></div>
+        </div>
+    </div>
+    <div class="relative img" style="margin: 30px 0;">
+        <img src="../images/guid.jpg">
+    </div>
+    <div class="guidb">
+        <div style="width: 100%;clear: both;height:80px;">
+            <ul class="minimg">
+                <li class="active"><div class="bg-box"></div><img src="../images/1.png" /></li>
+                <li class=""><div class="bg-box"></div><img src="../images/2.png" /></li>
+                <li class=""><div class="bg-box"></div><img src="../images/3.png" /></li>
+                <li class=""><div class="bg-box"></div><img src="../images/4.png" /></li>
+                <li class=""><div class="bg-box"></div><img src="../images/5.png" /></li>
+                <li class=""><div class="bg-box"></div><img src="../images/6.png" /></li>
+            </ul>
+        </div>
+        <div class="swiper-wrapper guidimgb">
+            <div class="swiper-slide">
+                <img src="../images/guidb1.png"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="../images/guidb2.png"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="../images/guidb3.png"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="../images/guidb4.png"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="../images/guidb5.png"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="../images/guidb6.png"/>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev swiper-button-guidbl"></div>
+        <div class="swiper-button-next swiper-button-guidbr"></div>
+    </div>
+</div>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        parallax: true,
+    });
+    var mySwiperImg = new Swiper( '.guidb', {
+        direction: 'horizontal',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        parallax: true,
+        pagination : '.swiper-pagination',
+        speed:100,
+        onSlideChangeEnd: function(swiper){
+            //Swiper初始化了
+
+            $('.minimg li').eq(swiper.activeIndex).addClass('active').siblings().removeClass('active');
+        }
+    } )
+    $('.minimg li').each(function(index){
+        $(this).click(function(){
+            mySwiperImg.slideTo(index+1);
+        })
+    });
+</script>
+
+</body>
+</html>

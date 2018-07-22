@@ -1,0 +1,278 @@
+.login_time{
+	margin: 20px 20px 0 0;
+}
+.money_dec{
+	height: 307px;
+	border-bottom: 1px solid #f3f3f3;
+}
+.md_left{
+	width:471px;
+	height: 307px;
+	border-right: 1px solid #f3f3f3;
+}
+.md_right{
+	height: 262px;
+	width: 434px;
+	padding:45px 20px 0 18px;
+}
+.surplus,.earning{
+	height: 108px;
+	padding:45px 0 0 20px;
+	border-bottom: 1px solid #f3f3f3;
+	cursor: default;
+}
+.s_title{
+	width:100px;
+}
+.s_title:hover .s_dec{
+	display: block;
+}
+.s_dec{
+	width: 225px;
+    border: 1px solid #f3f3f3;
+    border-radius: 3px;
+    background: #fff;
+    padding: 8px;
+    top: -18px;
+    left: 110px;
+    display: none;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.s_dec:before{
+	width: 14px;
+	height: 14px;
+	position: absolute;
+	top:20px;
+	left:-10px;
+	content:'';
+	background: url(../images/float_arr.png) no-repeat;
+}
+.s_con{
+	margin-top: 6px;	
+}
+.doubt{
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	background: url(../images/doubt.png) no-repeat;
+	margin: 2px 0 0 8px;
+}
+.recharge{
+	display: inline-block;
+	width: 68px;
+	height: 32px;
+	background: #117eff;
+	line-height: 32px;
+	border-radius: 3px;
+	color:#fff;
+	margin:5px 15px 0 25px;
+}
+.withdraw{
+	display: inline-block;
+	width: 68px;
+	height: 32px;
+	line-height: 32px;
+	border-radius: 3px;
+	border:1px solid #f3f3f3;
+}
+.type_list{
+	width: 290px;
+    position: absolute;
+    z-index: 2;
+}
+.type_list li{
+	height: 20px;
+	margin-bottom: 20px;
+	padding-left:22px;
+	color: #989898;
+    font-size: 16px;
+}
+.type_list li:first-child{
+	padding-left: 0;
+	font-size:20px;
+	padding-bottom: 6px;
+}
+.type_list li:first-child .type_name{
+	width: 129px;
+}
+
+.point{
+	width:8px;
+	height: 8px;
+	background: #80ade5; /*可用余额*/
+	border-radius: 50%;
+	top:6px;
+	left:0;
+}
+.point2{
+	background: #e9e777;/*冻结金额*/
+}
+.point3{
+	background: #f1a769;/*待收本金*/
+}
+.point4{
+	background: #d18fc2;/*待收收益*/
+}
+.point5{
+	background: #92c4ab;/*待返返利*/
+}
+.point6{
+	background: #e9f3fd;
+}
+.type_name{
+	width: 110px;
+	display: inline-block;
+}
+
+.earning_bar{
+	height: 60px;
+	background: #fff6f7;
+	line-height: 60px;
+	font-size: 16px;
+	color: #353535;
+	padding:0 20px;
+}
+.earning_bar li{
+	width: 33.3%;
+}
+.main_info_box{
+	padding:20px;
+}
+.mib_title{
+	height: 60px;
+	line-height: 60px;
+}
+.payment_plan{
+	height: 470px;
+}
+.payment_plan_data{
+	width: 880px;
+	height: 359px;
+	margin:0 auto;
+	border:1px solid #f5f5f5;
+}
+._line{
+	height:1px;
+	width: 100%;
+	background: #f5f5f5;
+	display: inline-block;
+	margin-top: 59px;
+}
+.date_month li{
+	width: 8%;
+	margin-top: 5px;
+}
+.date_month li.cur{
+	width: 6%;
+}
+.data_info{
+	width: 20px;
+	height: 359px;
+	bottom:25px;
+	left: 50%;
+	margin-left: -10px;
+}
+.date_month .cur.tl .data_info{
+	left:10px;
+}
+.date_month .cur.tr .data_info{
+	left:auto;
+	right:0;
+}
+.progress{
+	width: 1px;
+	height: 0%;
+	background: #1e82fe;
+	bottom:7px;
+	left:10px;
+	display: none;
+}
+.num_info{
+	background: #1e82fe;
+	height: 34px;
+	padding:0 10px;
+	border-radius:5px;
+	color:#fff;
+	line-height: 34px;
+	font-size: 16px;
+	text-align: center!important;
+	z-index: 1;
+	top:-60px;
+	left:50%;
+	-webkit-transform:translateX(-50%);
+	-moz-transform:translateX(-50%);
+	-ms-transform:translateX(-50%);
+	transform:translateX(-50%);
+}
+.circle_t{
+	width: 6px;
+	height: 6px;
+	border:6px solid #1e82fe;
+	border-radius: 50%;
+	top:-18px;
+	left:-8px;
+}
+.circle_b{
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #1e82fe;
+	bottom:-8px;
+	left:-3px;
+}
+.invest_trend{
+	height: 485px;
+}
+.tr_list ol li,.tr_list ul li{
+	width:20%;
+}
+.tr_list ol li.tc,.tr_list ul li.tc{
+	width:30%;
+}
+/* 账户安全 */
+.account_safe{
+	height:57px; 
+	border-bottom:1px dashed #f5f5f5;
+}
+.account_safe li{
+	float:left;
+	height:57px; 
+	line-height: 57px;
+	width: 110px;
+}
+.account_safe .item2{
+	width: 420px;
+}
+.account_safe .item3{
+	width: 150px;
+	background: url(../../../images/right.png) no-repeat left center;
+}
+.account_safe .item3.err{
+	color:#e96460;
+	background: url(../../../images/error.png) no-repeat left center;
+}
+/* 升级弹框 */
+.update{
+	width:640px;
+	height: 664px;
+	top:180px;
+	left:50%;
+	margin-left: -320px;
+	background-image: url(../images/update_info.png);
+	background-repeat:no-repeat;
+	z-index: 10000;
+}
+.setting_btn{
+    width: 273px;
+    height: 77px;
+    bottom: 180px;
+    left: 186px;
+    display: inline-block;
+}
+.update_close_btn{
+	width: 42px;
+	height: 42px;
+	bottom:0px;
+	left:300px;
+}

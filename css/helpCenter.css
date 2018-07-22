@@ -1,0 +1,246 @@
+.contentBox{
+	min-width: 1200px;
+    padding-top:25px;
+}
+.main{
+    border:1px solid #f3f3f3;
+    background: #fff;
+    padding-bottom:70px;
+}
+.tab_box{
+    height: 68px;
+    border-bottom: 1px solid #f3f3f3;
+    padding-left: 46px;
+    line-height: 68px;
+}
+.tab{
+    display: inline-block;
+    padding:0 33px;
+}
+.tab.cur{
+    height: 65px;
+    color:#2082ff;
+    border-bottom: 3px solid #2082ff;
+}
+.con{
+    padding:0 48px;
+}
+.title{
+    height: 19px;
+    border-left: 4px solid #2082ff;
+    line-height: 19px;
+    padding-left: 18px;
+    margin: 48px 0 37px 0;
+}
+.problem{
+    height: 45px;
+    background: #f8f9fe;
+    margin-top:13px;
+    line-height: 45px;
+    padding:0 25px;
+}
+/* 关于我们 */
+.img_box1{
+    margin-bottom: 70px;
+}
+.img_box2{
+    margin-top:52px;
+}
+.p_info{
+    text-indent: 25px;
+    line-height: 35px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.special{
+    height: 139px;
+    background: #4195ff;
+    margin-left:-48px;
+    margin-top: 50px;
+    width: 1150px;
+    padding-left: 48px;
+}
+.team_dec{
+    height: 112px;
+    padding-top: 27px;
+    font-size: 24px;
+    line-height: 40px;
+    margin-bottom: 38px;
+}
+.team_info{
+    height: 304px;
+    border-bottom: 1px solid #f3f3f3;
+}
+.team_info img{
+    margin:36px 132px 0 4px;
+}
+.teamer{
+    padding-top: 40px;
+}
+.position{
+    margin-left:28px;
+    margin-top: 19px;
+}
+.t_info{
+    width: 735px;
+    text-indent: 2rem;/*空2格*/
+    line-height: 35px;
+    margin-top: 30px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.zzzz_con{
+    margin-top:52px; 
+}
+.zzzs_title{
+    margin-top:20px;
+}
+.zzzs_img{
+    width: 315px;
+    min-height: 200px;
+    margin-right: 36px;
+    text-align: center;
+}
+.zzzs_dec{
+    width: 750px;
+    margin-top:5px;
+    line-height: 35px;
+}
+/* 媒体报道 */
+.mtbd_header{
+    width: 100%;
+    height: 355px;
+    margin:48px 0 30px 0;
+}
+.mtbd_dec{
+    height: 300px;
+    background: #1e82ff;
+    width: 380px;
+    padding:55px 32px 0;
+}
+.mtbd_dec_title{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.mtbd_dec_con{
+    line-height: 35px;
+    text-indent: 25px;
+}
+.mtbd_con{
+    min-height: 168px;
+    border-bottom: 1px solid #f3f3f3;
+    margin-top: 0;
+    padding: 34px 0;
+}
+.mtbd_con .zzzs_img{
+    width: 220px;
+    height: 136px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.mtbd_con .zzzs_title{
+    margin-top: 0;
+}
+.mtbd_con .zzzs_dec{
+    width: 845px;
+    min-height: 88px;
+    text-indent: 2rem;
+}
+/* 联系我们 */
+.p_map{
+    width: 100%;
+    height: 435px;
+    margin-top:48px;
+    margin-bottom: 68px;
+}
+.info_main{
+    padding-left: 50px;
+    height: 430px;
+    background: url(../images/lxwm_icon.jpg) no-repeat left top;
+}
+.info_main p{
+    margin-top:16px;
+    line-height: 38px;
+}
+.ewm{
+    margin-top: 18px;
+}
+.info_en{
+    padding-left: 2px;
+    line-height: 35px;
+}
+/* 招贤纳士 */
+.last_box{
+    width: 1198px;
+    margin-left:-48px;
+}
+.zxns_header{
+    padding:38px 0 35px;
+}
+.zxns_box{
+    padding-bottom:27px;
+}
+.z_ctrl{
+    width: 1152px;
+    height: 58px;
+    line-height: 58px;
+    padding-left: 48px;
+    background: #f7f8fe;
+    margin-left:-1px;
+    cursor: pointer;
+}
+.z_ctrl i{
+    position: absolute;
+    top: 26px;
+    right: 56px;
+    width: 14px;
+    height: 6px;
+    content: "";
+    background: url(../images/arr_t.png) no-repeat;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    transition: all 0.2s;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+.z_ctrl i.top {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.z_con{
+    padding: 0px 48px;
+}
+.z_title{
+    margin:20px 0;
+}
+.z_info p{
+    line-height: 40px;
+}
+.send_btn{
+    width: 148px;
+    height: 44px;
+    margin-top:15px;
+}
+/* 电子协议 */
+.detail_con{
+    min-height: 500px;
+}
+.MsoNormal{
+    line-height: 30px;
+    color:#989898;
+}
+/* 公告详情 */
+.detail_info{
+    margin:15px 0 10px;
+}
+.detail_con{
+    line-height: 30px;
+}
+.page_bar{
+    margin-top:20px;
+}

@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../../../css/global.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/paginate.v1.css">
+    <link rel="stylesheet" type="text/css" href=".././css/centerPublic.css">
+    <link rel="stylesheet" type="text/css" href="./../css/myInvest.css">
+    <script type="text/javascript" src="../../../js/jquery1.10.2.min.js"></script>
+    <script type="text/javascript" src="../../../js/global.js"></script>
+    <script type="text/javascript" src="./../js/centerPublic.js"></script>
+    <title>宜泉资本-我的卡券</title>
+</head>
+<body>
+  <style>
+    .cardNum{
+        border-radius: 50px;
+        background-color: #1e82fe;
+        min-width: 12px;
+        padding:0 5px;
+        height:22px;max-width: 32px;
+        display: inline-block;
+        font-size: 16px;color: #fff;
+        text-align: center;line-height: 22px;
+        text-indent:0px !important;
+        position: absolute;
+        top:7px;
+        right:10px;
+        pointer-events:none;
+    }
+      .cardExcharge{
+        height: 88px;width:904px; border-radius: 5px;border: 1px solid #f3f3f3;display: block;margin: 30px auto 0 auto;line-height: 90px;
+      }
+      .ce9{color: #e96360;}
+      .c98{color: #989898;}
+      .c0c{color: #0c0c0c;}
+      .pl10{padding-left: 10px;}
+      .pr10{padding-right: 10px;}
+      .pl20{padding-left: 20px;}
+      .pr20{padding-right: 20px;}
+      .rightExcharge{cursor: pointer;}
+      .dateCard{white-space: nowrap;}
+      .dateCard p{height: 40px;line-height: 20px;}
+      .timePass{background: url(../../../images/timePass.png);width: 50px;height: 46px;background-size: 100% 100%;display: block;margin: 0 auto;}
+      .hasUse{background: url(../../../images/hasUse.png);width: 50px;height: 46px;background-size: 100% 100%;display: block;margin: 0 auto;}
+      .noUse{background: url(../../../images/noUse.png);width: 50px;height: 46px;background-size: 100% 100%;display: block;margin: 0 auto;}
+      .persenIcon{background: url(../../../images/persenIcon.png);width: 16px;height: 12px;background-size: 100% 100%;display: block;margin:8px auto;}
+      .moneyIcon{background: url(../../../images/moneyIcon.png);width: 16px;height: 12px;background-size: 100% 100%;display: block;margin: 8px auto;}
+      .welfareicon{background: url(../../../images/welfareicon.png);width: 16px;height: 12px;background-size: 100% 100%;display: block;margin: 8px auto;}
+      .iconBlue{color: #1e82fe;}
+      .iconRed{color: #e96360;}
+      .iconYellow{color: #fc912c;}
+      .iconGray{ color: #dddddd;}
+      .iconBg{width: 28px;height: 28px;border-radius: 100%;margin: 20px 10px 20px 20px;}
+      .iconBgblue{background: #1e82fe;}
+      .iconBgred{background: #e96360;}
+      .iconBgyellow{background: #fc912c;}
+      .iconBgray{background: #dddddd;}
+      .trade_record_box ul li{line-height: 30px;}
+      .trade_record_box ul{padding: 15px 0;}
+      .exep_list ol li.tc, .exep_list ul li.tc {width: 29%;}
+      .inputCard{width: 400px;height: 300px;position: fixed;top: 50%;margin-top: -150px;left: 50%;margin-left: -200px;z-index: 9;border-radius: 4px;background: #fff;display: none;}
+      .cardPopHeader{height: 59px;border-bottom: 1px solid #f3f3f3;line-height: 60px;color: #000;}
+      .cardPopHeader span img{display: block;margin: 25px 15px 25px 0;cursor: pointer;-webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;}
+      .cardPopHeader span img:hover{transform:rotate(180deg);
+-ms-transform:rotate(180deg);
+-moz-transform:rotate(180deg);
+-webkit-transform:rotate(180deg);
+-o-transform:rotate(180deg); }
+.cardExchangeInput input{
+    border-radius: 4px;border: 1px solid #f3f3f3 ;width: 298px;height: 38px;line-height: 40px;padding-left: 5px;display: block;margin: 60px auto 5px auto;font-size: 18px;
+}
+.cardExchangeInput input:focus{border: 1px solid #1e82fe ;}
+.cardBtn input{width: 110px;height: 40px;text-align: center;border-radius: 4px;line-height: 40px;cursor:pointer; font-size: 18px;}
+.cardBtn input[value="兑换"]{
+    margin-left: 80px;color: #fff;background: #1e82fe;
+}
+.cardBtn input[value="取消"]{
+    margin-left: 20px;color: #0c0c0c;background: #fff;border: 1px solid #dddddd;
+}
+.errorCard{width: 100%;height: 30px;clear: both;color: #e96360;display: none}
+.errorCard img{margin:4px 10px 0 50px;}
+.cardBtn{position: relative;bottom: -40px;}
+.borderError{border:1px solid #e96360 !important;}
+  </style>
+    <div class="wrap w1200 clearfix">
+        <div class="userCenter_left fl">
+            <!--个人中心左侧开始-->
+            <div class="toPersonSet_cont">
+                <a id="headPortrait" href="javascript:;" class="head tx_boy"></a>
+                <ol class='clearfix'>
+                    <li><a href="javascript:;" class="setting"></a></li>
+                    <li><a href="javascript:;" class="setting"></a></li>
+                    <li><a href="javascript:;" class="setting"></a></li>
+                </ol>
+            </div>
+            <ul class="nav_box">
+                <li><a href="javascript:;">帐户总览</a></li>
+                <li><a href="javascript:;">我的投资</a></li>
+                <li><a href="javascript:;">回款日历</a></li>
+                <li><a href="javascript:;">邀请返利</a></li>
+                <li   class="user_select"><a href="javascript:;">我的卡券</a></li>
+                <li><a href="javascript:;">资金记录</a></li>
+                <li><a href="javascript:;">我的借款</a></li>
+                <li><a href="javascript:;">还款计划</a></li>
+                <li><a href="javascript:;">充值</a></li>
+                <li><a href="javascript:;">提现</a></li>
+                <li><a href="javascript:;">账户安全</a></li>
+                <li><a href="javascript:;">我的消息<b class="msgNum">9</b></a></li>
+            </ul>
+        </div>
+        <div class="userCenter_right fr">
+
+            <div class="right_title f18">
+                <span class="title_info g0c fl">我的卡券</span>
+            </div>
+            <div class="right_con">
+                <!-- 卡券兑换 -->
+                <div class="cardExcharge">
+                    <span class="fl pl20">
+                      <span class="c98 f16">可用卡券</span>
+                      <span class="ce9 f30">0</span>
+                      <span class="c0c f16">张</span>
+                    </span>
+                    <a class="fr pr20 rightExcharge" id="rightExcharge" onclick="rightExcharge()">兑换卡券</a>
+                </div>
+                <div class="select_box">
+                    <div class="_select rel fl">
+                        <i class="_arr"></i>
+                        <p class="_selectVal f16 g0c">卡券状态</p>
+                        <ul class="_options abs hide">
+                            <li class="_option">全部</li>
+                            <li class="_option rel">未使用<span class="cardNum">3</span></li>
+                            <li class="_option rel">已使用<span class="cardNum">45</span></li>
+                            <li class="_option rel">已过期<span class="cardNum">5</span></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="main_info_box">
+                        <div class="trade_record">
+                                <div id="record_list" class="tr_list f16 g0c exep_list">
+                                    <ol>
+                                        <li class="fl tl">卡券类型</li>
+                                        <li class="fl tc">使用条件</li>
+                                        <li class="fl tc">卡券状态</li>
+                                        <li class="fl tr">使用有效期</li>
+                                    </ol>
+                                    <div class="trade_record_box ">
+                                        <ul>
+                                            <li class="fl tl rel iconBlue">
+                                                <span class="fl iconBg iconBgblue"><i class="moneyIcon"></i></span>
+                                                <span class="fl">
+                                                    <label>现金券</label><br/>
+                                                    <label>￥20</label>
+                                                </span>
+                                            </li>
+                                            <li class="fl tc dateCard c98">
+                                                <p>单笔投资满2000元可用<br/>投资期限满3个月可用</p>
+                                            </li>
+                                            <li class="fl tc toe"><i class="noUse"></i></li>
+                                            <li class="fl tr dateCard c98">2017/02/01-2017/07/01</li>
+                                        </ul>
+                                        <ul>
+                                            <li class="fl tl rel iconRed">
+                                                <span class="fl iconBg iconBgred"><i class="persenIcon"></i></span>
+                                                <span class="fl">
+                                                    <label>加息券</label><br/>
+                                                    <label>￥20</label>
+                                                </span>
+                                            </li>
+                                            <li class="fl tc dateCard c98">
+                                                    <p>单笔投资满2000元可用<br/>投资期限满3个月可用</p>
+                                            </li>
+                                            <li class="fl tc toe"><i class="noUse"></i></li>
+                                            <li class="fl tr dateCard c98">2017/02/01-2017/07/01</li>
+                                        </ul>
+                                        <ul>
+                                            <li class="fl tl rel iconYellow">
+                                                <span class="fl iconBg iconBgyellow"><i class="moneyIcon"></i></span>
+                                                <span class="fl">
+                                                    <label>体验金券</label><br/>
+                                                    <label>￥20</label>
+                                                </span>
+                                            </li>
+                                            <li class="fl tc toe c98"><p>单笔投资满2000元可用<br/>投资期限满3个月可用</p></li>
+                                            <li class="fl tc toe"><i class="noUse"></i></li>
+                                            <li class="fl tr dateCard c98">2017/02/01-2017/07/01</li>
+                                        </ul>
+                                        <ul>
+                                            <li class="fl tl rel iconYellow">
+                                                <span class="fl iconBg iconBgyellow"><i class="welfareicon"></i></span>
+                                                <span class="fl">
+                                                    <label>福利标</label><br/>
+                                                    <label>￥20</label>
+                                                </span>
+                                            </li>
+                                            <li class="fl tc toe c98"><p>单笔投资满2000元可用<br/>投资期限满3个月可用</p></li>
+                                            <li class="fl tc toe"><i class="noUse"></i></li>
+                                            <li class="fl tr dateCard c98">2017/02/01-2017/07/01</li>
+                                        </ul>
+                                        <ul>
+                                                <li class="fl tl rel iconGray">
+                                                    <span class="fl iconBg iconBgray"><i class="moneyIcon"></i></span>
+                                                    <span class="fl">
+                                                        <label>现金券</label><br/>
+                                                        <label>￥20</label>
+                                                    </span>
+                                                </li>
+                                                <li class="fl tc toe iconGray"><p>单笔投资满2000元可用<br/>投资期限满3个月可用</p></li>
+                                                <li class="fl tc toe"><i class="timePass"></i></li>
+                                                <li class="fl tr dateCard iconGray">2017/02/01-2017/07/01</li>
+                                        </ul>
+                                        <ul>
+                                                <li class="fl tl rel iconGray">
+                                                    <span class="fl iconBg iconBgray"><i class="moneyIcon"></i></span>
+                                                    <span class="fl">
+                                                        <label>现金券</label><br/>
+                                                        <label>￥20</label>
+                                                    </span>
+                                                </li>
+                                                <li class="fl tc toe iconGray"><p>单笔投资满2000元可用<br/>投资期限满3个月可用</p></li>
+                                                <li class="fl tc toe"><i class="hasUse"></i></li>
+                                                <li class="fl tr dateCard iconGray">2017/02/01-2017/07/01</li>
+                                        </ul>
+                                        <ul>
+                                                <li class="fl tl rel iconGray">
+                                                    <span class="fl iconBg iconBgray"><i class="moneyIcon"></i></span>
+                                                    <span class="fl">
+                                                        <label>现金券</label><br/>
+                                                        <label>￥20</label>
+                                                    </span>
+                                                </li>
+                                                <li class="fl tc toe iconGray"><p>单笔投资满2000元可用<br/>投资期限满3个月可用</p></li>
+                                                <li class="fl tc toe"><i class="hasUse"></i></li>
+                                                <li class="fl tr dateCard iconGray">2017/02/01-2017/07/01</li>
+                                        </ul>
+                                        <ul>
+                                                <li class="fl tl rel iconGray">
+                                                    <span class="fl iconBg iconBgray"><i class="moneyIcon"></i></span>
+                                                    <span class="fl">
+                                                        <label>现金券</label><br/>
+                                                        <label>￥20</label>
+                                                    </span>
+                                                </li>
+                                                <li class="fl tc toe iconGray"><p>单笔投资满2000元可用<br/>投资期限满3个月可用</p></li>
+                                                <li class="fl tc toe"><i class="hasUse"></i></li>
+                                                <li class="fl tr dateCard iconGray">2017/02/01-2017/07/01</li>
+                                        </ul>
+                                        <ul>
+                                                <li class="fl tl rel iconGray">
+                                                    <span class="fl iconBg iconBgray"><i class="moneyIcon"></i></span>
+                                                    <span class="fl">
+                                                        <label>现金券</label><br/>
+                                                        <label>￥20</label>
+                                                    </span>
+                                                </li>
+                                                <li class="fl tc toe iconGray"><p>单笔投资满2000元可用<br/>投资期限满3个月可用</p></li>
+                                                <li class="fl tc toe"><i class="hasUse"></i></li>
+                                                <li class="fl tr dateCard iconGray">2017/02/01-2017/07/01</li>
+                                        </ul>
+                                        <ul>
+                                                <li class="fl tl rel iconGray">
+                                                    <span class="fl iconBg iconBgray"><i class="moneyIcon"></i></span>
+                                                    <span class="fl">
+                                                        <label>现金券</label><br/>
+                                                        <label>￥20</label>
+                                                    </span>
+                                                </li>
+                                                <li class="fl tc toe iconGray"><p>单笔投资满2000元可用<br/>投资期限满3个月可用</p></li>
+                                                <li class="fl tc toe"><i class="hasUse"></i></li>
+                                                <li class="fl tr dateCard iconGray">2017/02/01-2017/07/01</li>
+                                        </ul>
+                                        <ul>
+                                                <li class="fl tl rel iconGray">
+                                                    <span class="fl iconBg iconBgray"><i class="moneyIcon"></i></span>
+                                                    <span class="fl">
+                                                        <label>现金券</label><br/>
+                                                        <label>￥20</label>
+                                                    </span>
+                                                </li>
+                                                <li class="fl tc toe iconGray"><p>单笔投资满2000元可用<br/>投资期限满3个月可用</p></li>
+                                                <li class="fl tc toe"><i class="hasUse"></i></li>
+                                                <li class="fl tr dateCard iconGray">2017/02/01-2017/07/01</li>
+                                        </ul>
+                                    </div>
+                                    <div class="no_record f16 g98 tc hide">
+                                        <img src="../images/no_record.png" height="80" width="100" alt="" />
+                                        <p>暂无卡券  </p>
+                                    </div>
+                                </div>
+                                <div>分页</div>
+                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--弹出层  -->
+    <div class="inputCard">
+        <div class="cardPopHeader"><span class="fl pl20 f20">兑换卡券</span><span class="fr pr10"><img src="../../../images/X.png" onclick="hideExchange()"/></span></div>
+        <div class="cardExchangeInput">
+            <input type="text" placeholder="请输入兑换码"  class=""/>
+        </div>
+        <div class="errorCard">
+            <img src="../../../images/error.png" alt="" class="fl ">
+            <p class="fl f18">请输入正确兑换码</p>
+        </div>
+        <div class="cardBtn">
+            <input type="button" value="兑换"/>
+            <input type="button" value="取消" onclick="hideExchange()"/>
+        </div>
+    </div>
+</body>
+</html>

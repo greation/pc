@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible"content="IE=9; IE=8; IE=7; IE=EDGE">
+    <title>首页</title>
+    <link href="../skins/default/css/global.css" type="text/css" rel="stylesheet"/>
+    <link href="../skins/default/css/menu.css" type="text/css" rel="stylesheet"/>
+    <link href="../skins/default/css/font.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="../plugins/swiper/swiper.min.css"/>
+    <script type="text/javascript" src="../new_js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../new_js/common.js"></script>
+
+
+
+</head>
+<style>
+	html,body{background: #FFFFFF;overflow-x: hidden;}
+	.cooperationlist{height: 50px;padding-left: 110px;}
+	.cooperationlist .swiper-slide img{height: 50px;-webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+		filter: grayscale(100%);}
+	.swiper-button-next, .swiper-container-rtl .swiper-button-prev{background: url("../skins/default/images/rarrow.png");width: 20px;}
+	.swiper-button-prev, .swiper-container-rtl .swiper-button-next{background: url("../skins/default/images/larrow.png");width: 20px;}
+</style>
+<div>
+    <div class="yqzb-header">
+        <div class="yqzb-header-container">
+            <div class="yqzb-header-container-content">
+                <div class="yqzb-header-container-elseNav">
+                    <div class="layout clearfix">
+                        <span class="tel_cont">客服热线：400-109-2626</span>
+                        <ul class="clearfix">
+                            <li>
+                                <a href="#">请登录</a>
+                                -
+                                <a href="#">注册</a></li>
+                            <span>|</span>
+                            <li><a href="#">帮助中心</a></li>
+                            <span>|</span>
+                            <li><a href="#">新手指南</a></li>
+                            <span>|</span>
+                            <li class="yqzb-erweima"><a href="javascript:;">关注我们 <i
+                                    class="iconfont icon-weixin2 iconPro wechat" style="font-size: 14px;"></i></a>
+                                <div class="erweima-box"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="yqzb-header-container-mainNav">
+                    <div class="layout clearfix">
+                        <a href="#" class="logo fl"></a>
+                        <div class="fr">
+                            <ul class="clearfix fl">
+                                <li><a class="actived" href="#">首页</a></li>
+                                <li><a class="" href="#">我要投资</a></li>
+                                <li><a class="" href="#">信息披露</a></li>
+                                <li><a class="" href="#">活动专区</a><span class="new"></span></li>
+                                <li><a class="" href="#">积分商城</a></li>
+                            </ul>
+
+                            <div class="lastChild fl">
+                                <a href="#"><i class="iconfont icon-yonghuming userIcon"></i>我的账户</a>
+								<ul class="fast_list abs">
+									<li><a href="javascript:;">充值</a></li>
+									<li><a href="javascript:;">提现</a></li>
+									<li><a href="javascript:;" class="rel">消息</a><i class="">...</i></li>
+									<li><a href="javascript:;">退出</a></li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<style>
+		.apple-banner {
+			width: 100%;
+			height: 720px;
+			overflow: hidden;
+		}
+		.apple-banner .swiper-container {
+			margin-top: -40px;
+			width: 100%;
+			height: 800px;
+		}
+		/*分页器*/
+		.apple-banner .swiper-pagination{
+			top:auto;
+			bottom:50px;
+			background:none;
+		}
+		.apple-banner  .swiper-pagination-bullet {
+			display: inline-block;
+			width: 50px;
+			height: 30px;
+			margin: 0 3px;
+			cursor: pointer;
+			background: none;
+			border-radius:0;
+			opacity: 1;
+		}
+		.apple-banner  .swiper-pagination-bullet span {
+			width: 50px;
+			height: 2px;
+			display: block;
+			background: rgba(255,255,255,0.2);
+		}
+		.apple-banner .swiper-pagination-bullet-active span{
+			background:#fff;
+		}
+		.apple-banner .autoplay .swiper-pagination-bullet-active span{
+			background: rgba(255,255,255,0.2);
+		}
+		.apple-banner  .swiper-pagination-bullet i{
+			background: #fff;
+			height: 2px;
+			transform:scaleX(0);
+			transform-origin: 0;
+			display: block;
+		}
+		.apple-banner .autoplay .firsrCurrent i{
+			transition:transform 2.9s linear;
+			transform:scaleX(1);
+		}
+		.apple-banner .autoplay .current i{
+			transition:transform 4s linear;
+			transform:scaleX(1);
+		}
+		.apple-banner  .autoplay .replace span{
+			background:#fff;
+		}
+		/*内容样式*/
+
+		.slide1 {
+			background: #000 url(../new_images/bg1.jpg) no-repeat center center;
+			background-size: auto 100%;
+		}
+
+		.slide2 {
+			background: #f3f3f3 url(../new_images/bg2.jpg) no-repeat center center;
+			background-size: auto 100%;
+		}
+		.slide3 {
+			background: #fff url(../new_images/bg3.jpg) no-repeat center center;
+			background-size: auto 100%;
+		}
+		.slide4 {
+			background: #fff url(../new_images/bg4.jpg) no-repeat center center;
+			background-size: auto 100%;
+		}
+		.slide5 {
+			background: #fff url(../new_images/bg5.jpg) no-repeat center center;
+			background-size: auto 100%;
+		}
+		.slide6 {
+			 background: #fff url(../new_images/bg6.jpg) no-repeat center center;
+			 background-size: auto 100%;
+		 }
+		.slide7 {
+			  background: #fff url(../new_images/bg7.jpg) no-repeat center center;
+			  background-size: auto 100%;
+		  }
+		.slide8 {
+			   background: #fff url(../new_images/bg8.jpg) no-repeat center center;
+			   background-size: auto 100%;
+		   }
+
+
+
+
+
+
+
+	</style>
+	<div class="apple-banner">
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide slide1">
+
+				</div>
+				<div class="swiper-slide slide2">
+
+				</div>
+				<div class="swiper-slide slide3">
+
+				</div>
+				<div class="swiper-slide slide4">
+
+				</div>
+				<div class="swiper-slide slide5">
+
+				</div>
+				<div class="swiper-slide slide6">
+
+				</div>
+				<div class="swiper-slide slide3">
+
+				</div>
+				<div class="swiper-slide slide7">
+
+				</div>
+				<div class="swiper-slide slide8">
+
+				</div>
+
+			</div>
+			<ul class="swiper-pagination autoplay"></ul>
+		</div>
+	</div>
+</div>
+
+<div class="indexaccumulate">
+    <ul>
+        <li class="index_message">
+			<span class="accumulate_message"></span>
+			<ul class="news">
+				<li>
+					<a class="index_word">【通知】宜泉资本2018年春节宜泉资本2018年春节宜泉资本2018年春节宜泉资本2018年春节宜泉资本2018年春节宜泉资本2018年春节</a>
+				</li>
+			</ul>
+			<span class="index_more">查看更多&nbsp;&nbsp;></span>
+		</li>
+        <li class="index_accumulateNum"><span class="accumulate_money"></span><a class="index_accout">累计交易金额(万元):</a><span class="indexNuber">79,610.62</span></li>
+        <li class="index_userNum"><span class="accumulate_user"></span><a class="index_accout">累计理财会员(人):</a><span class="indexNuber">403,482</span></li>
+    </ul>
+</div>
+<!--平台优势-->
+<div class="index_advantage">
+	-&nbsp;&nbsp;平台优势&nbsp;&nbsp;-
+</div>
+<div class="index_four_advantage">
+	<ul>
+		<li>
+			<div class="">
+				<img src="../new_images/project.png"/>
+				<p>
+					<span >项目优质</span><br/>
+					筛选优质资产
+				</p>
+			</div>
+		</li>
+		<li>
+			<div class="">
+				<img src="../new_images/safe.png"/>
+				<p>
+					<span >资金安全</span><br/>
+					新浪支付资金托管
+				</p>
+			</div>
+		</li>
+		<li>
+			<div class="">
+				<img src="../new_images/accumulate.png"/>
+				<p>
+					<span >收益稳固</span><br/>
+					不动产稳定增值抗通胀
+				</p>
+			</div>
+		</li>
+		<li>
+			<div class="">
+				<img src="../new_images/justice.png"/>
+				<p>
+					<span >公正权威</span><br/>
+					不动产担保 全权委托书
+				</p>
+			</div>
+		</li>
+	</ul>
+</div>
+
+<!--体验金-->
+<div class="index_express">
+	
+	<div class="index_express_in">
+		<div class="">
+			<a href="javascript:void(0)" class="downloadApp"></a>
+		</div>
+		<div class="index_novice">
+			<div class="index_experience">
+				<div class="index_novice_name">新手标</div>
+				<div class="index_novice_describe">期限短， 回款快，新手入门福利</div>
+				<div class="index_novice_ratetime">
+					<span class="">7.0%</span>
+					<span class="">1 月</span>
+				</div>
+				<div class="index_novice_ratetime_describe">
+					<span class="">约定年化率</span>
+					<span class="">期限</span>
+				</div>
+			</div>
+			<div class="index_rightget">立即体验</div>
+		</div>
+		<div class="index_novice">
+			<div class="index_experience">
+				<div class="index_novice_name">体验金标</div>
+				<div class="index_novice_describe">0投入，坐享利息    体验式福利</div>
+				<div class="index_novice_ratetime">
+					<span class="">6.8%</span>
+					<span class="">3 天</span>
+				</div>
+				<div class="index_novice_ratetime_describe">
+					<span class="">约定年化率</span>
+					<span class="">期限</span>
+				</div>
+			</div>
+			<div class="index_rightget">立即体验</div>
+		</div>
+
+	</div>
+
+	
+</div>
+<!--理财专区-->
+<div class="index-financial">
+	<div class="index-financial_bg">
+		<div class="index-financial_title">理财专区</div>
+	</div>
+	<div class="index-financial_three">
+		<div class="index_car">
+			<div class="index_car_transform">
+				<div class="index-financial_in">
+					<div class="index-financial_name">车满盈系列</div>
+					<div class="index-financial_rate">9.0 - 13.0%</div>
+					<div class="index-financial_rateDescribe">约定年化率</div>
+					<div class="index-financial_time">90 - 360天</div>
+					<div class="index-financial_timeDescribe">投资期限</div>
+					<div class="index-financial_get">立即加入</div>
+				</div>
+			</div>
+		</div>
+		<div class="index_house">
+			<div class="index_house_transform">
+				<div class="index-financial_in">
+					<div class="index-financial_name">房月盈系列</div>
+					<div class="index-financial_rate">9.0 - 13.0%</div>
+					<div class="index-financial_rateDescribe">约定年化率</div>
+					<div class="index-financial_time">90 - 360天</div>
+					<div class="index-financial_timeDescribe">投资期限</div>
+					<div class="index-financial_get">立即加入</div>
+				</div>
+			</div>
+		</div>
+		<div class="index_make">
+			<div class="index_make_transform">
+				<div class="index-financial_in">
+					<div class="index-financial_name">预约专享</div>
+					<div class="index-financial_rate">9.0 - 13.0%</div>
+					<div class="index-financial_rateDescribe">约定年化率</div>
+					<div class="index-financial_time">90 - 360天</div>
+					<div class="index-financial_timeDescribe">投资期限</div>
+					<div class="index-financial_get">立即加入</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	
+	
+</div>
+
+
+
+
+<!--媒体报道-->
+<div class="index_media_bg">
+	<div class="index_media">
+		-&nbsp;&nbsp;媒体报道&nbsp;&nbsp;-
+	</div>
+
+	<div class="index_media_list">
+		<ul>
+            <li>
+                <a>
+                    <p class="index_media_img"></p>
+                    <p class="index_media_title">宜泉资本：理财…</p>
+                    <p class="index_media_time">2018-04-24</p>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <p class="index_media_img"></p>
+                    <p class="index_media_title">宜泉资本：理财…</p>
+                    <p class="index_media_time">2018-04-24</p>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <p class="index_media_img"></p>
+                    <p class="index_media_title">宜泉资本：理财…</p>
+                    <p class="index_media_time">2018-04-24</p>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <p class="index_media_img"></p>
+                    <p class="index_media_title">宜泉资本：理财…</p>
+                    <p class="index_media_time">2018-04-24</p>
+                </a>
+            </li>
+		</ul>
+	</div>
+</div>
+
+<!--合作机构-->
+<div class="index_cooperationName">
+	-&nbsp;&nbsp;合作机构&nbsp;&nbsp;-
+</div>
+
+<div class="index_cooperation">
+	 <div class="swiper-container cooperationlist">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="../new_images/slpgh.png"/></div>
+      <div class="swiper-slide"><img src="../new_images/xlzfh.png"/></div>
+      <div class="swiper-slide"><img src="../new_images/tdkjh.png"/></div>
+      <div class="swiper-slide"><img src="../new_images/cfcah.png"/></div>
+      <div class="swiper-slide"><img src="../new_images/dhh.png"/></div>
+      <div class="swiper-slide"><img src="../new_images/gwlh.png"/></div>
+      <div class="swiper-slide"><img src="../new_images/xmlyh.png"/></div>
+    </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</div>
+
+
+<!-- footer -->
+<div id="footer" class="footer">
+	<div class="w1200">
+		<div class="foot_info">
+			<div class="foot_info_l fl white f14">
+				<div class="link_box ">
+					<a href="javascript:;" class="foot_link white">联系我们</a>
+					<a href="javascript:;" class="foot_link white">帮助中心</a>
+					<a href="javascript:;" class="foot_link white">安全保障</a>
+					<a href="javascript:;" class="foot_link white">新手指南</a>
+				</div>
+				<div class="foot_position">
+					上海市长宁区愚园路1240号绿地商务大厦1005室       邮编200050
+				</div>
+				<div class="foot_phone">
+					<p>服务电话&nbsp;&nbsp;&nbsp;&nbsp; <span>400-109-2626</span></p>
+					<p>客服邮箱&nbsp;&nbsp;&nbsp;&nbsp; kefu@ekeyfund.com</p>
+					<p>服务时间&nbsp;&nbsp;&nbsp;&nbsp; 周一至周五 10:00-18:30</p>
+				</div>
+				<div class="record f16">
+					Copyright 2018 上海响泉金融信息服务有限公司 | 沪ICP备16016133号-1
+				</div>
+			</div>
+			<div class="foot_info_r fr">
+				<div class="erm_box white f16 tc">
+					<div class="fl">
+						<span>手机客户端</span>
+						<div class="ewm_con">
+							<img src="../new_images/ewm_mobile.jpg" alt="" />
+						</div>
+					</div>
+					<div class="follow_ewm fr">
+						<span>关注宜泉资本</span>
+						<div class="ewm_con">
+							<img src="../new_images/ewm_follow.jpg" alt="" />
+						</div>
+					</div>
+				</div>
+				<div class="safetys">
+					<a href="javascript"><img src="../new_images/_cxwz.jpg" height="100%" width="100%" alt="" /></a>
+					<a href="javascript"><img src="../new_images/_itrust.jpg" height="100%" width="100%" alt="" /></a>
+					<a href="javascript"><img src="../new_images/_trustutn.jpg" height="100%" width="100%" alt="" /></a>
+					<a href="javascript"><img src="../new_images/_webscan.jpg" height="100%" width="100%" alt="" /></a>
+					<a href="javascript"><img src="../new_images/_hyyz.png" height="100%" width="100%" alt="" /></a>
+					<a href="javascript"><img src="../new_images/_cv.jpg" height="100%" width="100%" alt="" /></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="../plugins/swiper/swiper.min.js"></script>
+<script src="../new_js/apple.js"></script>
+
+<script>
+    var swiper = new Swiper('.cooperationlist', {
+    	slidesPerView: 4,
+    	spaceBetween: 30,
+      slidesPerGroup: 3,
+      loop: true,
+      loopFillGroupWithBlank: true,
+        prevButton:'.swiper-button-prev',
+        nextButton:'.swiper-button-next',
+    });
+  </script>
+
+</body>
+</html>

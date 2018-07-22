@@ -1,0 +1,452 @@
+/* banner */
+.banner{
+	width: 100%;
+	min-width: 1200px;
+	margin-top: 2px;
+	background: #fff;overflow: hidden;
+}
+.banner_con .swiper-wrapper .swiper-slide a img{width: 100%;height: 100%;}
+.bg{
+	width: 100%;
+	min-width: 1200px;
+	height: 470px;
+	background: url(../images/banner_bg.png) repeat-y center #000;
+}
+.banner_box{
+	width: 100%;
+	top:0;
+	left:0;
+}
+.banner_con{
+	width: 100%;
+	height: 470px;
+}
+.banner_con .swiper-pagination{
+	text-align: center;  bottom: 20px !important;}
+.banner_con .swiper-pagination .swiper-pagination-bullet{
+	width: 15px;
+	height: 15px;
+	background: #fff;
+	opacity: 1;
+	border-radius: 50%;
+}
+.banner_con .swiper-pagination-bullet-active{
+	background:#007aff !important;
+}
+.data_box{
+	padding:65px 30px 0;
+	height: 240px;
+	width: 210px;
+	background: #fff;
+	box-shadow: 3px 3px 20px rgba(0,0,0,.1);
+	left: 50%;
+	display: block;
+	position: absolute;
+	z-index:99;
+	margin-left:330px;
+	top:83px;
+}
+.data_box .title_bar{
+	width: 102px;
+	height: 34px;
+	line-height: 34px;
+	text-align: center;
+	background:#ed956f;
+	color: #fff;
+	top:-7px;
+	left:85px;
+}
+.data_box .list{
+	height: 116px;
+	color:#0c0c0c;
+}
+.data_box .con{
+	font-size: 40px;
+	color: #e86460;
+}
+.advantage_bulletin {
+	min-width: 1200px;
+	height: 216px;
+}
+.advantage{
+	margin-top:30px;
+}
+.advantage_detail li{
+	width: 188px;
+	height: 113px;
+	padding:7px 0 0 115px;
+	background: url(../images/advantage01.png) no-repeat 10px top;
+}
+.advantage_detail li.b{
+	background: url(../images/advantage02.png) no-repeat 10px top;
+}
+.advantage_detail li.c{
+	background: url(../images/advantage03.png) no-repeat 10px top;
+}
+.advantage_detail li.d{
+	background: url(../images/advantage04.png) no-repeat 10px top;
+	width: 170px;
+}
+.advantage_detail li b{
+	display: block;
+	margin-bottom: 8px;
+}
+.advantage_detail li p{
+	line-height: 26px;
+	font-size: 16px;
+}
+.bulletin{
+	border-top: 1px solid #f3f3f3;
+	margin-top:26px;
+}
+.bulletin_l{
+	margin-top: 25px;
+	width:480px;
+	height: 20px;
+	line-height: 20px;
+	padding-left:30px;
+	background: url(../images/bulletin.png) no-repeat center left;
+	color:#989898;
+	overflow: hidden;
+}
+.news{
+	top:0;
+	left:75px;
+	width: 415px;
+	padding-left:10px;
+}
+.news li{
+	height: 24px;
+}
+.news li a,.news li span{
+	height:21px;
+	line-height:21px;
+}
+.new_title{
+	display: inline-block;
+	width: 240px;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.more{
+	padding-right: 24px;
+	background: url(../images/arr_r_c.png) no-repeat center right;
+	color:#989898;
+}
+.bulletin_r{
+	margin-top: 25px;
+}
+/* 体验标 */
+.experience{
+	height: 326px;
+	margin-top:30px;
+}
+.experience_main,.app_ewm{
+	height: 326px;
+	width: 894px;
+	background: #fff;
+}
+.app_ewm{
+	width: 290px;
+	background: url(../images/app_ewm2.jpg) no-repeat;
+}
+.step{
+	height: 146px;
+	/* background: url(../images/step.png) no-repeat center; */
+}
+.step dl{
+	margin-top:18px;
+	width: 338px;
+	padding-left:25px;
+	background: url(../images/step_bg.png) no-repeat right 50px;
+}
+.step dl.b{
+	width: 300px;
+}
+.step dl.c{
+	padding-left:15px; 
+	width: 175px;
+	background:none;
+}
+.step dt{
+	margin-top: 32px;
+}
+.step dd{
+	margin-left:15px;
+}
+.step b{
+	display: block;
+	font-size: 26px;
+	margin-bottom: 5px;
+}
+.step p{
+	line-height: 22px;
+}
+.experience_con {
+	height: 180px;
+}
+.experience_bg{
+	width: 324px;
+	height: 120px;
+	background: url(../images/tyb_bg.jpg) no-repeat;
+	color: #fff;
+	font-size: 36px;
+	padding-top:60px;
+}
+.experience_bg p{
+	margin-top: 16px;
+}
+.experience_info{
+	width: 568px;
+	border-top:1px solid #f3f3f3;
+}
+.experience_info .rate{
+	width: 160px;
+	margin: 50px 0 0 70px;
+}
+.experience_info .dec{
+	width: 150px;
+	margin-top: 65px;
+}
+.experience_info .invest a{
+	display: block;
+	margin-top: 60px;
+	width: 148px;
+	height: 44px;
+	border-radius: 5px;
+	background: #e96460;
+	color: #fff;
+	line-height: 44px;
+}
+/* 安心理财 */
+.ease_financial{
+	margin-top: 29px;
+	height: 364px;
+	background: #fff;
+}
+.ease_financial_bg{
+	width: 208px;
+	height: 364px;
+	background: url(../images/ease_financial.jpg) no-repeat;
+}
+.ease_financial_bg h4{
+	font-size: 40px;
+	width: 80px;
+	display: block;
+	margin:70px auto 10px;
+}
+.ease_financial_bg p{
+	width: 70px;
+	margin: 0 auto;
+	padding-top: 6px;
+	border-top: 1px solid #fff;
+	line-height: 23px;
+}
+.ease_financial .icon{
+	color:#fff;
+	width: 70px;
+	height: 21px;
+	line-height: 21px;
+	background: url(../images/ease_financial_title_bg.png) no-repeat;
+	top:-5px;
+	right:56px;
+}
+.ease_financial_lists{
+	width: 992px;
+	height: 100%;
+}
+.ease_financial_list{
+	width: 992px;
+	height: 121px;
+	border-bottom: 1px solid #f3f3f3;
+}
+.efl li{
+	width: 136px;
+	margin-top: 34px;
+}
+.efl .title{
+	width: 288px;
+	padding-left: 22px;
+}
+.efl .title h3{
+	height: 24px;
+	width: 280px;
+	line-height: 24px;
+	font-weight: normal;
+}
+.title_icon{
+	margin-right: 14px;
+}
+.title_con a{
+	width: 246px;
+}
+.coupon span{
+	display: inline-block;
+	margin: 6px 8px 0 0;
+	height: 21px;
+	line-height: 20px;
+	border:1px solid #ff9c1b;
+	color:#ff9c1b;
+	padding:0 18px;
+	-webkit-border-radius: 11px;
+	-moz-border-radius: 11px;
+	-ms-border-radius: 11px;
+	border-radius: 11px;
+}
+.coupon .conpon_jx{
+	color:#e96460;
+	border-color:#e96460;
+}
+.efl .rate{
+	margin-top:28px;
+	width: 200px;
+}
+.efl .dec{
+	margin-top:5px;
+}
+.rateCon{
+	height: 36px;
+	line-height: 36px;
+}
+.efl .term{
+	width: 190px;
+}
+.efl .progress{
+	width: 155px;
+}
+.p_num{
+	color:#4a4a4a;
+}
+.p_box{
+	width: 88px;
+	height: 2px;
+	background: #989898;
+	margin: 8px 0 2px;  
+}
+.p_speed{
+	height: 2px;
+	background: #e96460;
+}
+.efl .invest{
+	margin-top:43px;
+}
+.efl .invest_btn {
+	width: 105px;
+	height: 42px;
+	border:1px solid #e96460;
+	border-radius: 3px;
+	line-height: 42px;
+	display: inline-block;
+}
+/* 优选推荐 */
+.preference{
+	margin-top: 28px;
+	height: 444px;
+}
+.preference .title{
+	height: 50px;
+}
+.preference .title .dec{
+	margin: 4px 0 0 10px;
+}
+.preference_box{
+	min-height: 393px;
+}
+.preference_list{
+	background: #fff;
+	width: 583px;
+	height: 392px;
+	border:1px solid #f3f3f3;
+	border-top:none;
+}
+.preference_list .imgDec{
+	width: 583px;
+	height: 179px;
+}
+.preference_list .dec{
+	width: 583px;
+	height: 134px;
+	padding-top: 45px;
+	top:0;
+	left:0;
+	background: rgba(0,0,0,.4);
+}
+.preference_list .dec p{
+	margin-top:8px;
+}
+.p_list_con{
+	padding: 0 44px;
+}
+.plc_dec{
+	margin-top: 45px;
+}
+.plc_dec p{
+	margin-bottom: 5px;
+}
+.plc_invest a{
+	display: inline-block;
+	width: 148px;
+	height: 44px;
+	color:#fff;
+	background: #e96460;
+	line-height: 42px;
+	margin-top: 85px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	border-radius: 5px;
+}
+/* 资讯报导 */
+.information{
+	background: #fff;
+	margin-top: 29px;
+}
+.information_lists{
+	padding:40px 0px 20px 18px;
+}
+.information_list{
+	width: 536px;
+	height: 200px;
+	margin-right: 50px;
+}
+.information_con{
+	width: 100%;
+	height: 135px;
+	border-top: 1px solid #f3f3f3;
+	margin-top: 25px;
+	padding-top:12px;
+}
+.info_con_img{
+	width: 221px;
+	height: 136px;
+	overflow: hidden;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	border-radius: 5px;
+}
+.info_con_text{
+	width: 275px;
+	margin-left: 35px;
+}
+.info_con_text h4{
+	color: #4a4a4a;
+	margin-top: 14px;
+}
+.info_con_text p{
+	text-indent: 2rem;
+	margin-top: 15px;
+	width: 276px;
+	height: 80px;
+	line-height: 26px;
+	overflow: hidden;
+}
+.info_con_text .detail_btn{
+	bottom:4px;
+	right:5px;
+	background: #fff;
+	border:1px solid #e96460;
+	padding:1px 13px;
+	border-radius: 15px;
+}

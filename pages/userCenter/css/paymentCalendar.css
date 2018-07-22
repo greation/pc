@@ -1,0 +1,159 @@
+/* 回款日历 */
+
+.main_info_box {
+    padding: 0 18px;
+}
+
+.calendarCon {
+    margin: 28px 0;
+    border: 1px solid #f3f3f3;
+    height: 460px;
+    padding:0 0 0 46px;
+}
+.calendar {
+	width: 370px;
+	padding-right: 46px;
+	border-right:1px solid #f3f3f3;
+	height: 100%;
+}
+.f_btn_pre,.f_btn_next {
+    position: relative;
+    line-height: 30px;
+    margin-top: 10px;
+    text-align: center;
+    height: 30px;
+    width: 30px;
+    left: 2px;
+    top:16px;
+    cursor: pointer;
+    background: url(../images/arr_pre.png) no-repeat center;
+}
+
+.f_btn_next {
+    left: -2px;
+    background: url(../images/arr_next.png) no-repeat center;
+}
+
+.f_rili_head{
+	margin:6px 0;
+}
+
+.f_riqi {
+    width: 280px;
+    padding: 0 10px;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    margin: 25px 0;
+    display: block;
+}
+
+
+.f_rili_table .f_today {
+    background-color: #f3f3f3;
+}
+
+.f_rili_table .f_on {
+    background-color: #117eff;
+    color: #fff;
+}
+
+.f_number {
+    cursor: pointer;
+}
+
+.f_rili_table {
+    width: 100%;
+}
+
+.f_rili_th {
+    float: left;
+    width: 14.25%;
+    text-align: center;
+    line-height: 40px;
+    height: 40px;
+}
+
+.f_td {
+    float: left;
+    width: 40px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    border-radius: 50%;
+    margin:5px 6px;
+}
+
+.f_money {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    bottom: -3px;
+    left: 50%;
+    margin-left: -4px;
+    background: #eb615f;
+    border-radius: 50%;
+}
+
+.f_table_msg {
+    position: absolute;
+    z-index: 2;
+    top: 34px;
+    left: 50%;
+    margin-left: -120px;
+    width: 280px;
+    background: #ccc;
+    line-height: 55px;
+    height: 46px;
+    text-align: center;
+    display: none;
+    color: #666;
+}
+.repayment_data{
+	width: 443px;
+}
+.total{
+	height: 90px;
+	line-height: 90px;
+	border-bottom: 1px solid #f3f3f3;
+	padding-left: 18px;
+}
+.repayment_dec{
+	padding:115px 0 0 18px;
+}
+.repayment_dec p{
+	margin-bottom: 32px;
+}
+.pointer{
+	width: 8px;
+	height: 8px;
+	background: #eb615f;
+	border-radius: 50%;
+	top:10px;
+	left:0;
+}
+.pointer2{
+	background: #117eff;
+}
+.pointer3{
+	background: #f3f3f3;
+}
+.dec_con{
+	margin-top: 108px;
+}
+.dec_con li{
+	padding-left: 20px;
+	margin-right: 25px;
+}
+.no_record{
+	min-height: 200px;
+	padding-top: 100px;
+}
+.to_invest{
+	background: #117eff;
+	height: 40px;
+	line-height: 40px;
+	margin-top: 10px;
+	width: 128px;
+}

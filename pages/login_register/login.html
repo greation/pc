@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" type="text/css" href="../../css/global.css">
+    <link rel="stylesheet" type="text/css" href="../../css/loginRegister.css">
+    <script type="text/javascript" src="../../js/jquery1.10.2.min.js"></script>
+    <script type="text/javascript" src="../../js/global.js"></script>
+</head>
+<style>
+	.codediv {
+    width: 282px;
+    height: 42px;
+    border-radius: 5px;
+    margin-left: 10px;
+    overflow: hidden;
+}
+.rcode{width: 100px;height: 42px;line-height: 42px;}
+.codeNum{width: 100px;height: 42px;line-height: 42px;}
+
+</style>
+<body>
+    <div class="contentBox succ w1200">
+        <!-- 面包屑 -->
+        <div id="crumb" class="crumb">
+            <a class="f16 g98" href="javascript:;">首页</a><span class="g98">&nbsp;/&nbsp;</span><span class="f16 g0c" href="javascript:;">用户登录</span>
+        </div>
+        <div class="main w1198">
+            <div class="title">
+                <h2 class="fwn g0c f20 fl">用户登录</h2>
+            </div>
+            <div class="con">
+                <div class="imgBox fl"><img src="../../images/register_img.jpg" height="257" width="303" alt="" /></div>
+                <div class="con_info login fr">
+                    <div class="info_box clearfix">
+                        <div class="ipt_box fr">
+                            <input class="ipt f16" type="text" placeholder="请输入手机号" />
+                        </div>
+                    </div>
+                    <span class="err_msg fr">请填写手机号</span>
+                    <div class="info_box clearfix">
+                        <div class="ipt_box fr">
+                            <input class="ipt psw f16" type="password" placeholder="请输入密码" />
+                        </div>
+                    </div>
+                    <div class="info_box clearfix">
+                        <div class="codediv fr">
+                            <input class="rcode psw f16 fl" type="password" placeholder="请填写验证码" />
+                            <input type="button" id="checkCode" class="codeNum fr" onClick="createCode()" />
+                        </div>
+                    </div>
+                    <span class="err_msg fr hide">请填写密码</span>
+                    <div class="remember fr clearfix">
+                        <input class="fl check" type="checkbox" /> 
+                        <span class="fl">记住用户名</span>
+                        <a href="javascript:;" class="fr">忘记密码</a>
+                    </div>
+                    <a href="javascript:;" class="btn_red_normal fr register_btn">登录</a>
+                    <div class="to_register fr tc g98">还没有账户 | <a href="javascript:;">立即注册</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

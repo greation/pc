@@ -1,0 +1,247 @@
+/*活动专区 */
+.Activity_banner {
+    background: url(../images/Activity_banner.png) no-repeat top center;
+    height: 500px;
+    text-align: center;
+}
+
+/*敬请期待 */
+.wait_for {
+    background: url("../images/wait_for.png") no-repeat center;
+    min-height: 600px;
+}
+
+.activity_cont {
+    margin: 2rem 0;
+    overflow: auto;
+}
+
+.activity_cont strong {
+    font-weight: normal;
+    font-size: 18px;
+    color: #333;
+    text-indent: .6rem;
+    display: inline-block;
+}
+
+.activity_cont ul {
+    margin: 2rem 0 2rem;
+}
+
+.activity_cont ul li {
+    float: left;
+    width: 23.2%;
+    margin: 10px 10px 40px;
+    min-height: 254px;
+    overflow: hidden;
+    height: 254px;
+    box-shadow: 0px 1px 20px rgba(0, 0, 0, .1);
+
+    transition: All 0.4s ease-in-out;
+    -webkit-transition: All 0.4s ease-in-out;
+    -moz-transition: All 0.4s ease-in-out;
+    -o-transition: All 0.4s ease-in-out;
+}
+
+.activity_cont ul li:hover {
+    transform: translate(0, -10px);
+    -webkit-transform: translate(0, -10px);
+    -moz-transform: translate(0, -10px);
+    -o-transform: translate(0, -10px);
+    -ms-transform: translate(0, -10px);
+}
+
+.activity_cont ul li .bg_over {
+    background-repeat: no-repeat;
+    width: 100%;
+    text-align: right;
+    display: inline-block;
+    transition: all 0.6s;
+    min-height: 210px;
+}
+
+.activity_cont ul li .bg_over:hover {
+    /* transform: scale(1.3);*/
+}
+
+.over_s {
+    position: relative;
+    top: -20px;
+}
+
+.over_s:hover .btn_go_cont {
+    display: inline-block;
+    width: 100%;
+    -webkit-transition: All 0.4s ease-in-out;
+    -moz-transition: All 0.4s ease-in-out;
+    -o-transition: All 0.4s ease-in-out;
+}
+
+.btn_default {
+    height: 43px;
+    border: 1px solid #F1F1F1;
+    border-top-width: 0;
+    padding: 0 .6rem;
+    color: #333;
+    z-index: 1;
+    position: relative;
+    background: #fff;
+}
+
+/*截取字符 */
+.btn_default span {
+    width: 60%;
+    margin-top: .77rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.btn_default a {
+    float: right;
+    color: #4A90E2;
+    background: url("../images/view_ico.png") no-repeat right;
+    background-size: .4rem;
+    padding-right: .8rem;
+    line-height: 43px;
+}
+
+.btn_go_cont {
+    display: none;
+
+}
+
+a.btn_go {
+    background: #0f7fff;
+    display: inline-block;
+    height: 44px;
+    width: 100%;
+    line-height: 44px;
+    text-align: center;
+    position: relative;
+    bottom: 44px;
+    color: #fff;
+    z-index: 6;
+}
+
+/*活动介绍弹出框*/
+.activity_cont_bg {
+    background: url("../images/activity_cont_bg.png") no-repeat;
+    height: 605px;
+    width: 750px;
+    position: fixed;
+    _position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -375px;
+    margin-top: -302.5px;
+    z-index: 10002;
+    display: none;
+    text-align: center;
+}
+
+.activity_cont_title {
+    background: url("../images/activity_dec.png") no-repeat;
+    height: 85px;
+    width: 247px;
+    display: inline-block;
+    top: -20px;
+    left: 40px;
+    position: relative;
+}
+
+.tk_click_close {
+    background: url("../images/close_bt.png") no-repeat;
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    position: relative;
+    float: right;
+    top: -23px;
+    right: -24px;
+    -webkit-transition: -webkit-transform 1s ease-out;
+    -moz-transition: -moz-transform 1s ease-out;
+    -o-transition: -o-transform 1s ease-out;
+    -ms-transition: -ms-transform 1s ease-out;
+
+}
+
+.tk_click_close:hover {
+    -webkit-transform: rotateZ(360deg);
+    -moz-transform: rotateZ(360deg);
+    -o-transform: rotateZ(360deg);
+    -ms-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+}
+
+.loading_bg {
+    background: url("../images/loading_bg.gif") no-repeat center #fff
+}
+
+.activity_contdiv {
+    height: 388px;
+    width: 652px;
+    text-align: left;
+    overflow-scrolling: auto;
+    overflow-x: hidden;
+    margin: 0 auto;
+    color: #D36712;
+    border-radius: 10px;
+}
+
+.activity_contdiv table {
+    margin: 10px auto;
+}
+
+.activity_contdiv table, td, tr {
+    border: 2px solid #0c0c0c;
+    padding: 3px;
+    border-collapse: collapse;
+    line-height: 1.5rem;
+}
+
+/*滚动条样式*/
+.activity_contdiv::-webkit-scrollbar { /*滚动条整体样式*/
+    width: 6px; /*高宽分别对应横竖滚动条的尺寸*/
+    height: 6px;
+}
+
+.activity_contdiv::-webkit-scrollbar-thumb { /*滚动条里面小方块*/
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: #F8551A;
+}
+
+.activity_contdiv::-webkit-scrollbar-track { /*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.activity_contdiv img {
+    max-width: 100%;
+}
+
+a.hd_go_btn, a.hd_over_btn, a.nostart_btn {
+    margin-top: 1em;
+    background: url("../images/hd_go_btn.png") no-repeat;
+    height: 66px;
+    width: 240px;
+    display: inline-block;
+    transition: all 0.4s;
+}
+
+a.hd_go_btn:hover, a.nostart_btn:hover {
+    opacity: .7;
+    transition: all 0.4s;
+}
+
+a.hd_over_btn {
+    background: url("../images/hd_over_btn.png") no-repeat;
+}
+
+a.nostart_btn {
+    background: url("../images/nostart_btn.png") no-repeat;
+}

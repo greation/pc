@@ -1,0 +1,351 @@
+.wrap {
+    margin: 20px auto;
+}
+
+/* user info */
+.toPersonSet_cont {
+    margin: 30px auto 0px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    height: 190px;
+}
+
+.toPersonSet_cont .head {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 auto 20px;
+    overflow: hidden;
+}
+
+.head_btn {
+    width: 100%;
+    height: 100%;
+    background: none;
+}
+
+.toPersonSet_cont li {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    margin: 0 9px;
+    line-height: normal;
+}
+
+.setting {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: url(../images/setting.png) no-repeat;
+}
+
+.set_phone_err {
+    background-position: 0px -50px;
+}
+
+.set_name {
+    background-position: -52px 0;
+}
+
+.set_name_err {
+    background-position: -52px -50px;
+}
+
+.set_card {
+    background-position: -104px 0;
+}
+
+.set_card_err {
+    background-position: -104px -50px;
+}
+
+.toPersonSet_cont li a:hover {
+    background-color: #fbfbfb
+}
+
+.msgNum {
+    background: red;
+    padding: 0 10px;
+    color: #fff;
+    border-radius: 10px;
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+.userCenter_left, .userCenter_right {
+    background: #fff;
+    width: 236px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    box-shadow: 0px 1px 1px #eee, 0px 3px 6px #eee;
+    min-height: 940px;
+}
+
+.userCenter_left h2 {
+    font-size: 18px;
+    padding: 10px 19px;
+}
+
+.nav_box li {
+    height: 59px;
+    line-height: 59px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.userCenter_left li a {
+    color: #0c0c0c;
+    display: inline-block;
+    font-size: 18px;
+    text-indent: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.userCenter_left li a:hover,
+.userCenter_left li.user_select a {
+    color: #1e82ff;
+    text-decoration: none;
+}
+
+/* center right */
+.userCenter_right {
+    width: 944px;
+    /*margin-top:10px;*/
+}
+
+.right_title {
+    height: 60px;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.title_info {
+    display: inline-block;
+    height: 59px;
+    padding: 0 20px;
+    line-height: 60px;
+    border-bottom: 2px solid #107eff;
+    color: #010101;
+}
+
+.trade_record_box {
+    border: 1px solid #f3f3f3;
+    border-top: none;
+}
+
+.tr_list ol {
+    height: 60px;
+    background: #f7f8fd;
+    line-height: 60px;
+    padding: 0 18px;
+}
+
+.tr_list ul {
+    height: 60px;
+    padding: 0 18px;
+    cursor: pointer;
+}
+
+.tr_list ul li {
+    height: 60px;
+    line-height: 60px;
+}
+
+.tr_list ol li, .tr_list ul li {
+    width: 20%;
+}
+
+.tr_list ol li.tc, .tr_list ul li.tc {
+    width: 30%;
+}
+
+.no_record {
+    min-height: 300px;
+    padding-top: 200px;
+    line-height: 35px;
+}
+
+.list_selected {
+    background: #f9f9f9;
+}
+
+/*我的积分*/
+.my_intergal_cont {
+    font-size: 16px;
+    height: 78px;
+    line-height: 78px;
+    padding: 0 16px;
+    border: 1px solid #f3f3f3;
+    margin: 20px 20px 0 20px;
+}
+
+.my_intergal_cont span {
+    color: #999;
+    float: left;
+}
+
+.my_intergal_cont b {
+    color: #f06e2e;
+    font-size: 30px;
+    padding: 0 6px;
+    font-weight: normal;
+}
+
+/* 遮罩和弹框 */
+#mask {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .3);
+    position: fixed;
+    z-index: 999;
+    display: none;
+}
+
+.popBox {
+    width: 350px;
+    height: 266px;
+    top: 50%;
+    left: 50%;
+    margin: -200px 0 0 -175px;
+    background: #fff;
+    position: fixed;
+    z-index: 1000;
+    display: none;
+}
+
+.pop_close_btn {
+    width: 34px;
+    height: 34px;
+    display: inline-block;
+    margin: 7px 12px 0 0;
+    cursor: pointer;
+    background: url(../images/pop_close.png) no-repeat center;
+}
+
+.popCon {
+    padding: 0 25px;
+    min-height: 200px;
+}
+
+.popTip {
+    margin: 15px 0;
+    padding-left: 30px;
+    line-height: 30px;
+    min-height: 45px;
+}
+
+.popBox .ipt_box {
+    margin-left: 0;
+    height: 40px;
+    width: 192px;
+}
+
+.popBox .ipt {
+    height: 40px;
+    line-height: 40px;
+}
+
+.popBox .get_msg {
+    width: 88px;
+    height: 42px;
+    line-height: 42px;
+}
+
+.popBox .err_msg {
+    margin-left: 0;
+}
+
+.tip_icon {
+    display: inline-block;
+    top: 2px;
+    left: -28px;
+    width: 18px;
+    height: 18px;
+    background: url(../../../images/error.png) no-repeat;
+}
+
+.err_msg {
+    width: 252px;
+    height: 36px;
+    line-height: 36px;
+    padding-left: 30px;
+    background: url(../../../images/wrong.png) no-repeat left center;
+}
+
+.popBox_err .popCon {
+    background: url(../../../images/wrong_large.png) no-repeat center 40px;
+}
+
+.popBox_succ .popCon {
+    background: url(../../../images/right_large.png) no-repeat center 40px;
+}
+
+.pop_msg_dec {
+    width: 100%;
+    margin: 130px 0 0 12px;
+}
+
+.doubt {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    background: url(../images/doubt.png) no-repeat;
+    margin: 2px 0 0 8px;
+}
+
+/*我的投资 新ico*/
+.borrow_ico {
+    background: url(../images/borrow_ico.png) no-repeat center center;
+    width: 15px;
+    height: 12px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.receivable_ico {
+    background: url(../images/receivable_ico.png) no-repeat;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: top;
+}
+
+.repayment_wait_ico, .yesrepayment_wait_ico {
+    background: url(../images/repayment_wait_ico.png) no-repeat;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: top;
+}
+
+.yesrepayment_wait_ico {
+    background: url(../images/yesrepayment_wait_ico.png) no-repeat;
+}
+
+.receivable_money {
+    color: #2885FB;
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+.view_borrow_bt, .view_borrow_bt_over {
+    background: url(../images/view_borrow_bt.png) no-repeat #fff;
+    width: 77px;
+    height: 16px;
+    line-height: 16px;
+    display: inline-block;
+    text-align: left;
+    text-indent: 6px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.view_borrow_bt_over {
+    text-indent: 12px;
+    background: url(../images/view_borrow_bt_over.png) no-repeat #fff;
+}

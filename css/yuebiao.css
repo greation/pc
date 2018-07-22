@@ -1,0 +1,70 @@
+.contentBox{
+	min-width: 1200px;
+    height: 1105px;
+    padding-top:25px;
+    background: url(../images/yb_bg.jpg) no-repeat center;
+}
+.yb_info{
+    width: 648px;
+    height: 802px;
+    background: #fff;
+}
+.title{
+    height: 85px;
+    border-bottom: 5px solid #f9f9f9;
+    line-height: 85px;
+    margin-bottom: 34px;
+}
+.selectCon{
+    min-height: 57px;
+    margin-top:24px; 
+}
+.select_title{
+    height: 57px;
+    line-height: 57px;
+    width: 133px;
+    padding-right: 20px;
+    text-align: right;
+}
+._select,._selectVal{
+    height: 55px;
+    line-height: 55px;
+    width:  430px;
+}
+._select{
+    border-color:#e8e8e8;
+}
+._options{
+    top:62px;
+}
+._arr{
+    width: 14px;
+    top:25px;
+    background: url(../images/arr_b.png);
+}
+.tip{
+    padding-right: 90px;
+    margin-top:18px;
+}
+.tip a{
+    color:#1e82fe;
+}
+.remarks{
+    border:1px solid #e5e5e5;
+    border-radius: 5px;
+    width: 387px;
+    height: 124px;
+    padding:16px 20px;
+    line-height: 24px;
+    resize:none;
+}
+.dec{
+    width: 443px;
+    line-height: 22px;
+    margin: 16px 0 36px 151px;
+}
+.btn_red_small{
+    margin-left: 151px;
+    width: 431px;
+}
+.btn_red_small:hover{background: #d9534f}

@@ -1,0 +1,228 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*reset*/
+body,div,ul,li,ol,h1,h2,h3,h4,h5,h6,input,textarea,select,p,dl,dt,dd,a,img,button,form,table,th,tr,td,tbody,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0;border:none;font-family:"Helvetica Neue", Helvetica, "Hiragino Sans GB", "STHeitiSC-Light", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;}
+body{color:#666;background:#f7f8fd;font-size:14px;}
+body,html{/*height:100%;*/min-width: 1200px;}
+em,i{font-style:normal;}
+strong{font-weight:normal;}
+a{text-decoration:none;font-size:14px;color:#1e82fe;}
+a:visited{text-decoration:none;}
+a:hover{text-decoration:none;}
+ul,ol,li{list-style:none;}
+input,button,a,textarea{outline:none;}
+input:-moz-placeholder{ /* Mozilla Firefox 4 to 18 */
+color:#bbb;}
+input::-moz-placeholder{ /* Mozilla Firefox 19+ */
+color:#bbb;}
+input:-ms-input-placeholder{color:#bbb;}
+input::-webkit-input-placeholder{color:#bbb;}
+/* 去掉IE10-11 文本框后的X按钮*/
+input::-ms-clear{display:none;}
+/*去掉IE10-11 密码框右边的小眼睛*/
+input::-ms-reveal{display:none;}
+/* 去掉chrome黄色背景 */
+input:-webkit-autofill {-webkit-box-shadow: 0 0 0px 1000px white inset !important;}
+
+/*css通用样式库*/
+.fl{float:left;}
+.fr{float:right;}
+.cl{clear:both;}
+.fwn{font-weight:normal;font-style:normal;}
+.fwb{font-weight:bold;}
+.ffa{font-family:Arial;}
+.ffg{font-family:Georgia;}
+.fft{font-family:Tahoma;}
+.ffl{font-family:Lucida Console;}
+.ffs{font-family:'宋体';}
+.ffw{font-family:'微软雅黑';}
+.tc{text-align:center;}
+.tr{text-align:right;}
+.tl{text-align:left;}
+.tdu{text-decoration:underline;}
+.g3{color:#333333;}
+.g6{color:#666666;}
+.g9{color:#999999;}
+.g98{color:#989898;}
+.g0c{color:#0c0c0c;}
+.red{color:#e96460;}
+.blue{color:#1e82fe;}
+.black{color:#000000;}
+.white{color:white;}
+.f0{font-size:0;}
+.f12{font-size:12px;}
+.f14{font-size:14px;}
+.f16{font-size:16px;}
+.f18{font-size:18px;}
+.f20{font-size:20px;}
+.f24{font-size:24px;}
+.f30{font-size:30px;}
+.f35{font-size:35px;}
+.f50{font-size:50px;}
+.toe{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.tidt20{text-indent:20px;}
+.tidt30{text-indent:30px;}
+.vm{vertical-align:middle;}
+.vmdib{vertical-align:middle;display:inline-block}
+.vtb{vertical-align:text-bottom;}
+.vt{vertical-align:top;}
+.vn{vertical-align:-2px;}
+.vimg{margin-bottom:-3px;}
+
+/*ie6图片多出3个像素*/
+.fixed{position:fixed;top:0;left:0;z-index:9999;}
+.rel{position:relative;}
+.abs{position:absolute;}
+.hide{display:none!important;}
+.show{display:block!important;}
+.dib{-moz-inline-stack:inline-block;display:inline-block;}
+.di{*display:inline;}
+.ovh{overflow:hidden;}
+.ovs{overflow:scroll;}
+.vh{visibility:hidden;}
+.vv{visibility:visible;}
+.clearfix{*zoom:1;}
+
+/*兼容ie6*/
+.clearfix:after,.clearfix:before{display:block;content:"clear";height:0;clear:both;overflow:hidden;visibility:hidden;}
+
+/*清除浮动*/
+.z{_zoom:1;}
+.ovz{overflow:hidden;zoom:1;}
+.ovo{overflow:auto;}
+.imgBottom{vertical-align:bottom;-ms-interpolation-mode:bicubic;}
+.dot{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;display:inline-block;}
+.w100{width:100%}
+.w1100{width:1100px;margin-left:auto;margin-right:auto;}
+.w1200{width:1200px;margin-left:auto;margin-right:auto;}
+.w1198{width:1198px;margin-left:auto;margin-right:auto;}
+.focus{border-color:#1e82fe!important;}
+.btn_red_normal{display:inline-block;width:148px;height:44px;background:#e96460;color:#fff;font-size:20px;line-height:44px;text-align:center;-webkit-border-radius:5px;-moz-border-radius:5px;-ms-border-radius:5px;border-radius:5px;cursor:pointer;}
+.btn_gray_normal{display:inline-block;width:148px;height:44px;background:#d1d1d2;color:#fff;font-size:20px;line-height:44px;text-align:center;-webkit-border-radius:5px;-moz-border-radius:5px;-ms-border-radius:5px;border-radius:5px;cursor:not-allowed;}
+.btn_red_small{display:inline-block;width:107px;height:44px;background:#e96460;color:#fff;font-size:16px;line-height:44px;text-align:center;-webkit-border-radius:5px;-moz-border-radius:5px;-ms-border-radius:5px;border-radius:5px;cursor:pointer;}
+.btn_gray_small{display:inline-block;width:107px;height:44px;background:#d1d1d2;color:#fff;font-size:16px;line-height:44px;text-align:center;-webkit-border-radius:5px;-moz-border-radius:5px;-ms-border-radius:5px;border-radius:5px;cursor:not-allowed;}
+.btn_blue{display:inline-block;width:108px;height:40px;background:#1e82fe;color:#fff;font-size:16px;line-height:40px;text-align:center;-webkit-border-radius:5px;-moz-border-radius:5px;-ms-border-radius:5px;border-radius:5px;cursor:pointer;}
+.btn_deepgray{background:#bbbbbb;cursor:not-allowed;}
+.disabled{cursor:not-allowed;background:#d1d1d2;color:#fff;}
+.coupon_red{display:inline-block;margin:6px 8px 0 0;height:21px;line-height:20px;border:1px solid #e96460;color:#e96460;padding:0 18px;-webkit-border-radius:11px;-moz-border-radius:11px;-ms-border-radius:11px;border-radius:11px;font-size:14px;}
+.coupon_base{display:inline-block;margin:6px 8px 0 0;height:21px;line-height:20px;border:1px solid #ff9c1b;color:#ff9c1b;padding:0 18px;-webkit-border-radius:11px;-moz-border-radius:11px;-ms-border-radius:11px;border-radius:11px;font-size:14px;}
+.wrapper{/*min-height:100%;margin-bottom:-413px;*/}
+.wrapper:after{content:"";display:block;}
+/*.footer,.wrapper:after{height:413px;}*/
+
+/* 直通车 */
+.header{width:100%;min-width:1200px;height:122px;}
+.direct{background:#f9f9f9;margin:0 auto;height:40px;line-height:40px;}
+.direct_left{width:400px;height:40px;}
+.direct_right{width:550px;height:40px;}
+.phone{display:inline-block;padding-left:36px;margin-right:15px;background:url(../images/phone.png) no-repeat 3px center;}
+.direct a,.direct_left span{display:inline-block;color:#989898;}
+.direct a{height:16px;line-height:16px;}
+.direct_right .register{border-left:1px solid #989898;border-right:1px solid #989898;padding:0 12px;margin:0 12px;}
+.help{border-right:1px solid #989898;padding:0 12px 0 0;margin:0 12px 0 0;}
+.direct_right .mobileInfo{height: 40px;margin-top: 0px;}
+.direct .wechat,.direct .mobile{width:20px;height:40px;background:url(../images/wechat.png) no-repeat center;}
+.direct .mobile{background:url(../images/mobile.png) no-repeat center;}
+.direct_right .register,.direct_right .login{height:16px;margin-top:12px;}
+.direct_right .wechat{margin:0 10px 0 3px;}
+.mobileInfo a:hover .erm_img_con{display:block;}
+.erm_img_con{display:none;border-radius:5px;padding:8px;width:125px;height:140px;background:#d1d1d2;color:#fff;text-align:center;z-index:99;top:40px;right:-60px;}
+.erm_img_con p{margin:5px auto;}
+
+/* navBar */
+.navBar{width:100%;background:#fff;min-width:1200px;height:82px;}
+.navBar.fixed{border-bottom:1px solid #f3f3f3;box-shadow:0px 2px 6px rgba(0,0,0,.15);}
+.logo{width:496px;height:82px;}
+.logo .logo_href{display:inline-block;width:136px;height:100%;}
+.logo .logo_activity{display:inline-block;width:340px;height:100%;}
+.tabBox a{height:82px;line-height:82px;display:inline-block;color:#0c0c0c;padding:0 16px;}
+.tabBox a.last{padding:0 0 0 16px;}
+.tabBox a.cur{color:#107eff;}
+.tabBox a.my_account{color:#107eff;padding-right:18px;max-width: 105px;}
+.my_account_box{max-width:140px;}
+.my_account_box:hover .fast_list{display:block;}
+.my_account i{width:10px;height:6px;top:38px;right:0px;display:inline-block;background:url(../images/blue_arr_b.png) no-repeat;}
+
+/* 面包屑 */
+.crumb{margin-bottom:16px;}
+
+/* toolbar */
+
+/* 右侧浮动  #页面优化 增加右侧悬浮Q 微信，客服电话，计算器*/
+.toolbar_area{position:fixed;top:68%;right:10px;z-index:999;margin-left:550px;padding-bottom:50px;}
+.toolbar_area .toolbar-item{width:40px;height:40px;margin:0 0 2px 35px;position:relative;cursor:pointer;}
+.toolbar_area .toolbar-item .item-con{position:absolute;right:55px;color:#000;overflow:hidden;text-align:center;top: -80px;}
+.toolbar_area .toolbar-item .item-con .item-box{position:absolute;right:-112px;transition:right 0.3s cubic-bezier(0.17,0.67,0.88,1) 0s;border-radius:5px;}
+.toolbar_area .toolbar-item .item-con.item-kefu .item-box{line-height:16px;padding:6px 0 6px 11px;}
+.toolbar_area .toolbar-item .item-con.item-back .item-box{line-height:42px;padding:6px 0 6px 11px;}
+.toolbar_area .toolbar-item .item-con.item-calc .item-box{line-height:32px;padding:10px 0 6px 11px;}
+.toolbar_area .toolbar-item .item-con.item-app .item-box{line-height:28px;padding:6px 0 6px 11px;}
+.toolbar_area .toolbar-item a{color:#000;text-decoration:none;}
+.toolbar_area .toolbar-item:hover .item-con{width:250px;height:120px;}
+.toolbar_area .toolbar-item:hover .item-con .item-box{right:0;}
+#back{display:none;}
+.toolbar_erm_box{width:250px;height:120px;}
+.toolbar_erm_box img{width:250px;height:120px;}
+.toolbar-item i{display:inline-block;width:40px;height:40px;text-align:center;vertical-align:middle;background:url(../images/icons.png) no-repeat;transition:all .2s linear;-webkit-transition:all .2s linear;}
+.toolbar-item i.icon00:hover{background-position:-50px 0px;}
+.activeIcon{    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle; overflow: hidden;border-radius: 50% }
+.activeIcon img{width: 100%;height: 100%;}
+.lowerRightActivity{width:120px;height: 120px;display: inline-block;overflow: hidden;}
+.lowerRightActivity img{width:120px;height: 120px;}
+
+/* QQ客服  */
+.toolbar-item i.icon01:hover{background-position:-50px -40px;}
+
+/* 计算器 */
+.toolbar-item i.icon02:hover{background-position:-50px -82px;}
+
+/* 公众号 */
+.toolbar-item i.icon03:hover{background-position:-50px -166px;}
+
+/*返回顶部  */
+.toolbar-item i.icon_app:hover{background-position:-50px -124px;}
+
+/*App下载   */
+.toolbar-item i.icon00{background-position:0px 0px;}
+.toolbar-item i.icon01{background-position:0px -40px;}
+.toolbar-item i.icon02{background-position:0px -82px;}
+.toolbar-item i.icon03{background-position:0px -166px;}
+.toolbar-item i.icon_app{background-position:0px -124px;}
+
+/* footer */
+.footer{margin-top:38px;min-width:1180px;height:300px;background:#2A2A2A;padding-top:10px;}
+.cooperation{height:46px;line-height:46px;margin-top:20px;}
+.cooperation .info_title{margin-right:38px;padding: 0;line-height: 46px;}
+.foot_info{padding-top:16px;margin-top:42px;}
+.foot_link{margin-right:50px;}
+.foot_phone{margin-top:16px;line-height: 30px;}
+.foot_phone span{margin-right:17px;margin-left: 1.2rem;display: inline-block}
+.foot_phone .email{margin-top:5px;}
+.foot_position{height:40px;margin-top:10px;}
+.foot_position span{display: inline-block;margin-left: 1.2rem;}
+.safetys{padding-left: 255px;margin-top: 20px;}
+.safetys a{width:57px;height:22px;margin-right:6px;display:inline-block;}
+.foot_info .record{margin-top:13px;}
+.erm_box{width:307px;height:168px;margin-left: 340px;}
+.erm_box .ewm_con{width:136px;height:127px;background:url(../images/ewm_bd.png) no-repeat;padding-top:10px;margin-top:12px;}
+
+/* _select相关公用样式 */
+._select,._input{width:148px;height:32px;border:1px solid #f3f3f3;-webkit-border-radius:5px;-moz-border-radius:5px;-ms-border-radius:5px;border-radius:5px;}
+._select{cursor:pointer;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
+._input{width:170px;padding-left:40px;}
+._input:before{position:absolute;top:6px;left:10px;width:20px;height:20px;content:"";background:url(../images/search.png) no-repeat;}
+._input input{width:165px;height:32px;line-height:32px;}
+._arr{position:absolute;top:14px;right:8px;width:10px;height:6px;content:"";background:url(../images/arr_b_s.png) no-repeat;-webkit-transition:all 0.2s;-moz-transition:all 0.2s;-ms-transition:all 0.2s;transition:all 0.2s;-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);-ms-transform:rotate(0deg);transform:rotate(0deg);}
+._arr._top{-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg);}
+._selectVal{width:128px;padding-right:20px;height:32px;text-indent:10px;line-height:32px;}
+._options{width:100%;background:#fff;border:1px solid #f3f3f3;border-radius:5px;top:40px;left:-1px;overflow:hidden;padding:8px 0;box-shadow:0px 2px 5px #f3f3f3;z-index:99;max-height:385px;overflow-y:auto;}
+._option{width:100%;height:30px;line-height:30px;text-indent:10px;font-size:16px;}
+._option:hover{color:#1e82fe;}
+._selected{color:#1e82fe;}
+
+/*test bt环境*/

@@ -1,0 +1,428 @@
+.select_box{
+	height:60px;
+	padding:28px 0 0 19px;
+}
+.select_box ._select{
+	margin-right: 20px;
+}
+.date_icon{
+/*	width: 14px;
+	height: 17px;
+	background: url(../images/date_icon.png) no-repeat;
+	top:8px;
+	left:18px;
+	display: inline-block;*/
+	width: 40px;
+	height: 32px;
+	background: url(../images/date_icon.png) center no-repeat;
+	top: 0;
+	left: 0;
+	display: inline-block;
+	cursor: default;
+}
+.date_to{
+	margin:5px 18px 0 0;
+}
+.date_select{
+	width: 146px;
+	padding-left:2px;
+}
+.date_select input{
+	height: 32px;
+	line-height: 32px;
+	padding-left:40px;
+	width: 105px;
+	font-size: 16px;
+	cursor: pointer;
+}
+.trade_record{
+	padding:0;
+}
+.tr_list ol li,.tr_list ul li{
+	width:10%;
+}
+.tr_list ol li.tc,.tr_list ul li.tc{
+	width:16%;
+}
+.tr_list ol li.x,.tr_list ul li.x{
+	width: 13%;
+}
+.record_name_info{
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+}
+.record_name:hover .s_dec{
+	display: block;
+}
+.s_dec{
+	width: 200px;
+	border:1px solid #f3f3f3;
+	border-radius: 3px;
+	background: #fff;
+	padding:12px 9px 12px 9px;
+	top:5px;
+	left:120px;
+	display: none;
+	line-height: 25px;
+	word-wrap:break-word;
+	-webkit-word-wrap:break-word;
+	word-break:break-all;
+	-webkit-word-break:break-all;
+}
+.s_dec:before{
+	width: 14px;
+	height: 14px;
+	position: absolute;
+	top:20px;
+	left:-10px;
+	content:'';
+	background: url(../images/float_arr.png) no-repeat;
+}
+/* 体验金标 */
+.experience_con{
+	padding:40px 20px;
+}
+.exp_state{
+	height: 212px;
+	border:1px solid #f3f3f3;
+	padding:36px 18px 0;
+}
+.exp_state_top{
+	height: 28px;
+	line-height: 28px;
+}
+.title_icon{
+	height: 28px;
+}
+.exp_state_con{
+	height: 160px;
+}
+.exp_state_con_l{
+	width: 450px;
+	height: 100%;
+}
+.exp_state_con li{
+	margin:26px 0 28px;
+}
+.exp_state_con_r ul li {
+	width: 370px;
+}
+.exp_s_l{
+	width: 150px;
+}
+.exp_info{
+	height: 204px;
+	border:1px solid #f3f3f3;
+	margin-top: 20px;
+	padding:44px 18px 0;
+}
+.exp_info li{
+	margin-bottom: 28px;
+}
+.exep_sel_box{
+	padding:0;
+	height: 110px;
+}
+.exep_sel_box h4{
+	margin:40px 0 22px;
+}
+.exep_list ol{
+	height: 60px;
+	background: #f7f8fd;
+	line-height: 60px;
+	padding:0 18px;
+}
+.exep_list ol li,.exep_list ul li{
+	width:20%;
+}
+.exep_list ol li.tc,.exep_list ul li.tc{
+	width:30%;
+}
+.exep_list ul{
+	height: 60px;
+	padding:0 18px;
+	cursor: pointer;
+}
+.exep_list ul li{
+	height: 60px;
+	line-height: 60px;
+}
+/* 投资详情 */
+.coupons{
+	margin-left: 15px;
+}
+.coupons span{
+	margin-top: 3px;
+}
+.main_icon{
+	color: #fff;
+    width: 70px;
+    height: 21px;
+    line-height: 21px;
+    background: url(../../../images/ease_financial_title_bg.png) no-repeat;
+    top: -5px;
+    left: 16px;
+}
+.load_agreement{
+	right:18px;
+}
+/* 资金记录 */
+.money_record ol li,.money_record ul li{
+	width: 20%;
+}
+.money_record ol li.tc,.money_record ul li.tc{
+	width: 20%;
+}
+/* 邀请返利 */
+.no_cur_title{
+    border-bottom: none;
+    font-size: 16px;
+    cursor: pointer;
+    color:#989898;
+    padding:0;
+}
+.no_cur_title a{
+	display: inline-block;
+	padding:0 20px;
+}
+.main_info_box{
+	padding:30px 18px;
+}
+.info_dec_box{
+	padding:0 25px;
+	height: 88px;
+	border:1px solid #f3f3f3;
+	line-height: 88px;
+}
+.info_dec_box li{
+	height: 88px;
+	width: 30%;
+}
+.info_dec_box li.first{
+	width: 40%;
+}
+.info_dec_title{
+	height: 70px;
+	line-height: 70px;
+	padding-left: 18px;
+}
+.inviteWay{
+	margin-top: 20px;
+}
+.way_dec{
+	height: 140px;
+	margin:0 -40px;
+}
+.inviteWay li{
+	width: 20%;
+	height: 20px;
+	padding-top: 100px;
+	background: url(../images/icon_xinlang.png) no-repeat center;
+}
+.inviteWay li.wx{
+	background: url(../images/icon_weichat.png) no-repeat center;
+}
+.inviteWay li.qq{
+	background: url(../images/icon_QQ.png) no-repeat center;
+}
+.inviteWay li.rr{
+	background: url(../images/icon_renren.png) no-repeat center;
+}
+.inviteWay li.tx{
+	background: url(../images/icon_tenxun_weibo.png) no-repeat center;
+}
+.jiathis_button{
+	top:30%;
+	left:35%;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+}
+.jiathis_button span{
+	visibility: hidden;
+}
+.copy{
+	margin:40px 0;
+}
+.copy_btn{
+	width: 100px;
+	height: 32px;
+	line-height: 32px;
+	background: #117eff;
+	cursor: pointer;
+	margin-left: 10px;
+}
+.rule{
+	padding:25px 35px;
+	border:1px dashed #117eff;
+	background: #f4f9ff;
+}
+.rule_con{
+	line-height: 30px;
+	margin:35px 0;
+}
+/* 充值提现 */
+.acount_info{
+	min-height: 330px;
+	border-bottom:1px solid #f3f3f3;
+	padding-top: 55px;
+}
+.acount_info_dec{
+	padding-left:18px;
+	margin-bottom: 25px;
+}
+.aconut_info_l{
+	min-width: 133px;
+}
+.ipt_box{
+	width: 204px;
+	height: 34px;
+	border:1px solid #f3f3f3;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.ipt{
+	line-height: 34px;
+	width:185px;
+	padding-left: 8px;
+}
+._radio{
+	cursor: pointer;
+	height: 24px;
+	overflow: hidden;
+	display: inline-block;
+	margin-right: 12px;
+}
+._radio i{
+	width: 16px;
+	height: 16px;
+	border:1px solid #bfbfbf;
+	display: inline-block;
+	border-radius: 50%;
+	margin: 3px 6px 0 0;
+}
+._radio.select i{
+	width: 6px;
+	height: 6px;
+	border:6px solid #1e82fe;
+	display: inline-block;
+	border-radius: 50%;
+}
+.choice_money{
+	margin-top: 5px;
+}
+.rule_con2{
+	margin:0;
+}
+.withdrawal_tip{
+	background: url(../../../images/error.png) no-repeat left center;
+	padding-left:25px;
+	margin-left: 150px;
+	margin-top: -10px;
+}
+.eBank_box{
+	width: 770px;
+}
+.eBank_box li{
+	width:180px;
+	height: 46px;
+	margin-right:10px;
+	margin-bottom: 10px;
+	border: 1px solid #eeeeee;
+	text-align: center;
+	line-height:46px;
+	color:#bbbbbb;
+	cursor: pointer;
+}
+.eBank_box li.cur{
+	width: 178px;
+	height: 44px;
+	line-height: 44px;
+	border:2px solid #eb625c;
+	position: relative;
+}
+.eBank_box li.cur:after{
+	content: '';
+	position: absolute;
+	right:0;
+	bottom:0;
+	width: 26px;
+	height: 18px;
+	background: url(../images/eBank/eBank_select.png) no-repeat;
+}
+.eBank_box li img{
+	vertical-align: middle;
+	display: inline-block;
+}
+.see_more i {
+	width: 14px;
+	height: 6px;
+	font-size: 26px;
+	overflow: hidden;
+	display: inline-block;
+	line-height: 0px;
+	margin-left: 10px;
+}
+.doubt {
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	background: url(../images/doubt.png) no-repeat;
+	margin: 2px 0 0 0px;
+	vertical-align:text-bottom;
+}
+.aheard-t:hover .ahead{
+	display: block;
+}
+.ahead {
+	width:193px;
+	border: 1px solid #f3f3f3;
+	border-radius: 3px;
+	background: #fff;
+	padding: 8px;
+	top:50px;
+	left: -46px;
+	display: none;
+	line-height: 20px;text-align: left;
+}
+.ahead:before{
+	width: 14px;
+	height: 14px;
+	position: absolute;
+	top:-12px;
+	left:188px;
+	content:'';
+	background: url(../images/float_arr.png) no-repeat;
+	transform:rotate(90deg);
+}
+.mt20{
+	margin-top:20px;}
+.card_list ol{
+	height: 60px;
+	background: #f7f8fd;
+	line-height: 60px;
+	padding:0 18px;
+}
+.card_list ul{
+	min-height: 60px;
+	cursor: pointer;
+}
+.wb10{width: 10%}
+.wb20{width: 20%}
+.wb15{width: 15%}
+.wb30{width: 30%;margin:0 5%;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>确认下单页</title>
+    <link rel="stylesheet" type="text/css" href="../css/global.css">
+    <link rel="stylesheet" type="text/css" href="../css/order.css">
+    <script type="text/javascript" src="../js/jquery1.10.2.min.js"></script>
+    <script type="text/javascript" src="../js/global.js"></script>
+</head>
+
+<body>
+    <div class="contentBox succ w1200">
+        <!-- 面包屑 -->
+        <div id="crumb" class="crumb">
+            <a class="f16 g98" href="javascript:;">首页</a><span class="g98">&nbsp;/&nbsp;</span><a class="f16 g98" href="javascript:;">投资列表</a><span class="g98">&nbsp;/&nbsp;</span><span class="f16 g0c" href="javascript:;">投资成功</span>
+        </div>
+        <div class="main w1198">
+            <div class="s_title g0c f35">恭喜您，投资成功</div>
+            <div class="back_info tc f16">返回信息：成功</div>
+            <div class="link_out f16 tc">系统将在<span id="num">5</span>秒钟后自动跳转，如果没有跳转，请点击<a class="f16" href="javascript:;">这里</a>跳转</div>
+            <div class="btn_box clearfix">
+                <a href="javascript:;" class="old_list btn_red_small fl">查看已投项目</a>
+                <a href="javascript:;" class="btn_red_small fr">继续投资</a>
+            </div>
+            <img class="invest_succ_img" src="../images/invest_succ_bg.jpg" height="257" width="919" alt="" />
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    var n = 4,timer;
+    timer = setInterval(function(){
+        $("#num").text(n--);
+        if(n<0){
+            //window.location.href=""
+            clearInterval(timer)
+        }
+    }, 1000);
+</script>
+</html>

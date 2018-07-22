@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" type="text/css" href="../../css/global.css">
+    <link rel="stylesheet" type="text/css" href="../../css/loginRegister.css">
+    <script type="text/javascript" src="../../js/jquery1.10.2.min.js"></script>
+    <script type="text/javascript" src="../../js/global.js"></script>
+</head>
+<style>
+    .codediv {
+        width: 330px;
+        height: 42px;
+        border-radius: 5px;
+        margin-left: 27px;
+        overflow: hidden;
+    }
+    .rcode{width: 176px;height: 42px;line-height: 42px;}
+    .codeNum{width: 100px;height: 42px;line-height: 42px;}
+</style>
+<body>
+<div class="new-login succ w1200">
+
+        <div class="con">
+            <div class="newcon login">
+                <div class="newinfo clearfix">
+                    <div class="newlogintitle">
+                        登录
+                    </div>
+                </div>
+                <div class="newinfo clearfix">
+                    <div class="newbox">
+                        <span class="telicon"></span>
+                        <input class="ipt f16" type="text" placeholder="请输入手机号" />
+                    </div>
+                </div>
+                <span class="newerr_msg ">请填写手机号</span>
+                <div class="newinfo clearfix">
+                    <div class="newbox ">
+                        <span class="pwdicon"></span>
+                        <input class="ipt psw f16" type="password" placeholder="请输入密码" />
+                    </div>
+                </div>
+                <div class="newinfo clearfix">
+                    <div class="codediv ">
+                        <input class="rcode psw f16 fl" type="password" placeholder="请填写验证码" />
+                        <input type="button" id="checkCode" class="codeNum fr" onClick="createCode()" />
+                    </div>
+                </div>
+                <span class="newerr_msg  hide">请填写密码</span>
+                <div class="newremenber clearfix">
+                    <a href="javascript:;" class="fl" style="margin-left: 25px;">忘记密码</a>
+                </div>
+                <a href="javascript:;" class="newloginbtn">登录</a>
+                <div class="newto_register tc "> <a href="javascript:;" class="g98">立即注册</a></div>
+            </div>
+        </div>
+</div>
+</body>
+</html>

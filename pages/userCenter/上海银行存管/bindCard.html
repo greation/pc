@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../../../css/global.css">
+    <link rel="stylesheet" type="text/css" href="./../css/centerPublic.css">
+    <link rel="stylesheet" type="text/css" href="./../css/realName.css">
+    <script type="text/javascript" src="../../../js/jquery1.10.2.min.js"></script>
+    <script type="text/javascript" src="../../../js/global.js"></script>
+    <title>宜泉资本-绑定银行卡</title>
+</head>
+<body>
+	<div class="wrap w1200 clearfix">
+		<div class="userCenter_right">
+	        <div class="right_title f18">
+	            <span class="title_info g0c fl">绑定银行卡</span>
+	        </div>
+	        <div class="right_con f16">
+				<div class="tip red tc">
+                    <span class="rel">
+                        <i class="abs tip_icon"></i>
+                        为了您的账户安全，请绑定您本人的储蓄卡（不支持信用卡）
+                    </span>
+                </div>
+				<div class="mian_con bankCard clearfix f18">
+                    <div class="info_box clearfix">
+                        <div class="info_dec fl tr g98">持卡人</div>
+                        <div class="ipt_box fl disabled">
+                            <input class="ipt f18" disabled="true" type="text" value="xxx" />
+                        </div>
+                    </div>
+					<div class="info_box clearfix">
+                	    <div class="info_dec fl tr g98">开户银行</div>
+                	    <div class="ipt_box fl">
+                	        <input class="ipt f18" type="text" placeholder="请输入开户银行" />
+                	    </div>
+                		<span class="err_msg red fl">开户银行</span>
+                	</div>
+                    <div class="info_box clearfix">
+                        <div class="info_dec fl tr g98">开户省市</div>
+                        <div class="select_box fl clearfix">
+                            <div class="_select rel fl">
+                                <i class="_arr"></i>
+                                <p class="_selectVal f18 g0c">省</p>
+                                <ul class="_options abs hide">
+                                    <li class="_option">北京</li>
+                                    <li class="_option">上海</li>
+                                    <li class="_option">广州</li>
+                                    <li class="_option">北京</li>
+                                    <li class="_option">上海</li>
+                                    <li class="_option">广州</li>
+                                    <li class="_option">北京</li>
+                                    <li class="_option">广州</li>
+                                </ul>
+                            </div>
+                            <div class="_select rel fl">
+                                <i class="_arr"></i>
+                                <p class="_selectVal f18 g0c">市</p>
+                                <ul class="_options abs hide">
+                                    <li class="_option">aaa</li>
+                                    <li class="_option">bbb</li>
+                                    <li class="_option">ccc</li>
+                                </ul>
+                            </div>
+                            <div class="_select rel fl">
+                                <i class="_arr"></i>
+                                <p class="_selectVal f18 g0c">县/区</p>
+                                <ul class="_options abs hide">
+                                    <li class="_option">aaa</li>
+                                    <li class="_option">bbb</li>
+                                    <li class="_option">ccc</li>
+                                    <li class="_option">aaa</li>
+                                    <li class="_option">bbb</li>
+                                    <li class="_option">ccc</li>
+                                    <li class="_option">aaa</li>
+                                    <li class="_option">bbb</li>
+                                    <li class="_option">ccc</li>
+                                    <li class="_option">aaa</li>
+                                    <li class="_option">bbb</li>
+                                    <li class="_option">ccc</li>
+                                    <li class="_option">aaa</li>
+                                    <li class="_option">bbb</li>
+                                    <li class="_option">ccc</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                	<div class="info_box clearfix">
+                	    <div class="info_dec fl tr g98">银行卡号</div>
+                	    <div class="ipt_box fl">
+                	        <input class="ipt f18" type="text" placeholder="请输入您的银行卡号" />
+                	    </div>
+                		<span class="err_msg red hide fl"></span>
+                	</div>
+                    <div class="info_box clearfix">
+                        <div class="info_dec fl tr g98">银行预留手机号</div>
+                        <div class="ipt_box fl">
+                            <input class="ipt f18" type="text" placeholder="请输入银行预留手机号" />
+                        </div>
+                        <span class="err_msg red hide fl"></span>
+                    </div>
+				</div>
+				<a href="javascript:;" class="btn_red_small confirm_btn next f18">下一步</a>
+	        </div>
+	    </div>
+	</div>
+    <div id="popBox" class="popBox">
+        <p class="clearfix"><i class="pop_close_btn fr"></i></p>
+        <div class="popCon">
+            <div class="popTip g0c f18">
+                <span class="rel">
+                    <i class="abs tip_icon"></i>
+                    短信验证码已发送至｛手机号码｝的手机上，请注意查收。
+                </span>
+            </div>
+            <div class="clearfix" style="min-height:72px;">
+                <div class="ipt_box fl">
+                    <input class="ipt f18" type="text" placeholder="请输入验证码" />
+                </div>
+                <span class="btn_red_small get_msg btn_deepgray fr">获取</span>
+                <span class="err_msg red fl">请输入验证码</span>
+            </div>
+            <div class="tc"><span class="btn_blue">确定</span></div>
+        </div>
+    </div>
+    <div id="mask"></div>    
+</body>
+<script type="text/javascript">
+    //显示弹框
+    $(function() {
+        showPopBox('popBox')
+    });
+</script>
+</html>

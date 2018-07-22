@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../../../css/global.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/paginate.v1.css">
+    <link rel="stylesheet" type="text/css" href=".././css/centerPublic.css">
+    <link rel="stylesheet" type="text/css" href="./../css/myInvest.css">
+    <script type="text/javascript" src="../../../js/jquery1.10.2.min.js"></script>
+    <script type="text/javascript" src="../../../js/global.js"></script>
+    <script type="text/javascript" src="./../js/centerPublic.js"></script>
+    <style>
+        .exep_list ol li, .exep_list ul li {width: 33.3%;}
+        .my_intergal_info{
+            clear: both;
+            width: 100%;
+            overflow:auto;
+            margin-bottom: 20px;
+        }
+        .my_intergal_info .title{ font-size: 18px;font-style:normal;padding-bottom: 10px;display: inline-block}
+    </style>
+    <title>宜泉资本-我的积分</title>
+</head>
+<body>
+    <div class="wrap w1200 clearfix">
+        <div class="userCenter_left fl">
+            <!--个人中心左侧开始-->
+            <div class="toPersonSet_cont">
+                <a id="headPortrait" href="javascript:;" class="head tx_boy"></a>
+                <ol class='clearfix'>
+                    <li><a href="javascript:;" class="setting"></a></li>
+                    <li><a href="javascript:;" class="setting"></a></li>
+                    <li><a href="javascript:;" class="setting"></a></li>
+                </ol>
+            </div>
+            <ul class="nav_box">
+                <li><a href="javascript:;">帐户总览</a></li>
+                <li><a href="javascript:;">我的投资</a></li>
+                <li class="user_select"><a href="javascript:;">我的积分</a></li>
+                <li><a href="javascript:;">邀请返利</a></li>
+                <li><a href="javascript:;">我的卡券</a></li>
+                <li><a href="javascript:;">资金记录</a></li>
+                <li><a href="javascript:;">我的借款</a></li>
+                <li><a href="javascript:;">还款计划</a></li>
+                <li><a href="javascript:;">充值</a></li>
+                <li><a href="javascript:;">提现</a></li>
+                <li><a href="javascript:;">账户安全</a></li>
+                <li><a href="javascript:;">我的消息<b class="msgNum">9</b></a></li>
+            </ul>
+        </div>
+        <div class="userCenter_right fr">
+            <div class="right_title f18">
+                <span class="title_info g0c fl">我的积分</span>
+            </div>
+            <div class="right_con">
+                <div class="main_info_box">
+                    <div class="my_intergal_cont">
+                           <div class="fl">
+                               <span>我的积分</span>
+                               <b>10000</b>
+                           </div>
+                           <a href="#" target="_blank" class="blue fr">如何得到积分?</a>
+                    </div>
+                    <div class="experience_con f16 g0c" style="padding-top: 20px;">
+                            <div class="my_intergal_info">
+                                <span class="title">积分明细</span>
+                                <br />
+                            <div class="_select date_select rel fl" style="margin-right:20px;">
+                                <i class="date_icon abs"></i>
+                                <input type="text" placeholder="开始时间"/>
+                            </div>
+                            <span class="fl g98 f16 date_to">至</span>
+                            <div class="_select date_select rel fl">
+                                <i class="date_icon abs"></i>
+                                <input type="text" placeholder="结束时间"/>
+                            </div>
+                            </div>
+
+                            <div id="record_list" class="tr_list f16 g0c exep_list">
+                                <ol>
+                                    <li class="fl tl">积分来源</li>
+                                    <li class="fl tc">积分</li>
+                                    <li class="fr tr">交易时间</li>
+                                </ol>    
+                                <div class="trade_record_box">
+                                    <ul>
+                                        <li class="fl tl rel record_name">第三期（2/3）</li>
+                                        <li class="fl tc toe">500</li>
+                                        <li class="fr tr toe">2016-12-11 12:33:28</li>
+                                    </ul>
+                                </div>
+                                <div class="no_record f16 g98 tc">
+                                    <img src="../images/no_record.png" height="80" width="100" alt="" />
+                                    <p>没有记录</p>
+                                </div>  
+                            </div>
+                            <div>分页</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
